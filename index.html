@@ -504,6 +504,81 @@
       .production-visual { min-height: 250px; }
       .footer-inner { display: grid; }
     }
+  
+
+    /* Mobile language stability fix: prevents long Swedish, German and Danish words from breaking the layout. */
+    body { overflow-x: hidden; }
+    .brand, .brand-word, .nav-links, .language-switcher, .hero-copy, .hero-card, .section-head, .service-card, .quote-card, .production-text, .contact-panel, .form-card { min-width: 0; }
+    h1, h2, h3, .hero-lead, .section-head p, .btn, .nav-links a, .fact dd, .trust-item p, .service-card p, .step p, .contact-panel p, .form-card p {
+      overflow-wrap: anywhere;
+      word-break: normal;
+      hyphens: auto;
+    }
+    .btn { text-align: center; line-height: 1.22; white-space: normal; }
+
+    @media (max-width: 720px) {
+      .nav-shell { gap: 8px; }
+      .brand { flex: 1 1 auto; gap: 10px; }
+      .brand-mark { flex: 0 0 auto; }
+      .brand-word { overflow: hidden; }
+      .brand-word strong { white-space: nowrap; }
+      .brand-word span { line-height: 1.15; white-space: normal; }
+      .language-switcher { flex: 0 0 auto; }
+      .language-menu { right: 0; width: min(270px, calc(100vw - 24px)); max-height: calc(100vh - 96px); overflow-y: auto; }
+      .hero h1 { font-size: clamp(34px, 10.4vw, 44px); line-height: 1.04; letter-spacing: -.045em; max-width: 100%; }
+      html[lang="sv"] .hero h1,
+      html[lang="de"] .hero h1,
+      html[lang="da"] .hero h1 { font-size: clamp(31px, 9.6vw, 38px); line-height: 1.08; letter-spacing: -.032em; }
+      html[lang="sv"] h2,
+      html[lang="de"] h2,
+      html[lang="da"] h2 { font-size: clamp(30px, 8.6vw, 35px); line-height: 1.08; letter-spacing: -.035em; }
+      html[lang="sv"] .service-card h3,
+      html[lang="de"] .service-card h3,
+      html[lang="da"] .service-card h3,
+      html[lang="sv"] .production-text h3,
+      html[lang="de"] .production-text h3,
+      html[lang="da"] .production-text h3,
+      html[lang="sv"] .quote-card h3,
+      html[lang="de"] .quote-card h3,
+      html[lang="da"] .quote-card h3,
+      html[lang="sv"] .form-card h3,
+      html[lang="de"] .form-card h3,
+      html[lang="da"] .form-card h3 { font-size: clamp(22px, 6.6vw, 28px); line-height: 1.14; letter-spacing: -.025em; }
+      .hero-card-title { align-items: flex-start; }
+      .seal { width: 62px; height: 62px; font-size: 18px; }
+      .fact dd { font-size: 14px; }
+      .btn { min-height: 50px; padding: 14px 18px; }
+    }
+
+    @media (max-width: 430px) {
+      .container { width: min(100% - 24px, var(--container)); }
+      .nav-shell { width: calc(100% - 14px); padding: 9px 8px 9px 10px; }
+      .brand-mark { width: 40px; height: 30px; }
+      .brand-word strong { font-size: 13px; letter-spacing: .18em; }
+      .brand-word span { display: none; }
+      .language-current { min-height: 36px; padding: 0 9px; }
+      .language-current strong { font-size: 11px; }
+      .menu-button { width: 38px; height: 38px; flex: 0 0 auto; }
+      .hero { padding-top: 116px; }
+      .hero h1 { font-size: clamp(31px, 9.6vw, 38px); }
+      html[lang="sv"] .hero h1,
+      html[lang="de"] .hero h1,
+      html[lang="da"] .hero h1 { font-size: clamp(29px, 8.8vw, 34px); line-height: 1.1; letter-spacing: -.025em; }
+      .hero-lead { font-size: 16px; }
+      .hero-card { padding: 18px; border-radius: 22px; }
+      .quote-card, .production-text, .contact-panel, .form-card { padding: 24px; }
+    }
+
+    @media (max-width: 360px) {
+      .brand-word strong { font-size: 12px; letter-spacing: .14em; }
+      .brand-mark { width: 36px; }
+      .language-current { padding: 0 8px; }
+      .menu-button { width: 36px; height: 36px; }
+      html[lang="sv"] .hero h1,
+      html[lang="de"] .hero h1,
+      html[lang="da"] .hero h1 { font-size: 28px; }
+    }
+
   </style>
 </head>
 <body>
@@ -918,7 +993,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Kontakta oss",
             "heroEyebrow": "Sömnadsproduktion Lettland",
-            "heroTitle": "Sömnadsproduktionspartner från Lettland",
+            "heroTitle": "Sömnadsproduktion från Lettland",
             "heroLead": "DK TEX fortsätter den långvariga europeiska produktionserfarenheten och kundrelationerna som etablerades av SIA FIRMA JATA.",
             "heroPrimary": "Kontakta DK TEX",
             "productionCapabilities": "Produktionskapacitet",
@@ -1328,7 +1403,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Kontakt aufnehmen",
             "heroEyebrow": "Nähproduktion Lettland",
-            "heroTitle": "Nähproduktionspartner aus Lettland",
+            "heroTitle": "Nähproduktion aus Lettland",
             "heroLead": "DK TEX führt die langjährige europäische Produktionserfahrung und die Kundenbeziehungen fort, die durch SIA FIRMA JATA aufgebaut wurden.",
             "heroPrimary": "DK TEX kontaktieren",
             "productionCapabilities": "Produktionsmöglichkeiten",
@@ -1492,7 +1567,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Kontakt os",
             "heroEyebrow": "Syproduktion Letland",
-            "heroTitle": "Syproduktionspartner fra Letland",
+            "heroTitle": "Syproduktion fra Letland",
             "heroLead": "DK TEX viderefører den mangeårige europæiske produktionserfaring og de kunderelationer, der blev etableret af SIA FIRMA JATA.",
             "heroPrimary": "Kontakt DK TEX",
             "productionCapabilities": "Produktionsmuligheder",
@@ -1588,6 +1663,7 @@
       const activeLang = translations[lang] ? lang : 'en';
       const dictionary = translations[activeLang];
       document.documentElement.lang = langMap[activeLang].html;
+      document.documentElement.setAttribute('data-active-lang', activeLang);
       document.title = dictionary.metaTitle || translations.en.metaTitle;
       document.querySelector('meta[name="description"]')?.setAttribute('content', dictionary.metaDescription || translations.en.metaDescription);
       document.querySelector('meta[property="og:title"]')?.setAttribute('content', dictionary.metaTitle || translations.en.metaTitle);
