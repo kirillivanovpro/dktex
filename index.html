@@ -630,6 +630,87 @@
       .language-menu { right: 0; width: min(270px, calc(100vw - 16px)); max-width: calc(100vw - 16px); }
     }
 
+
+
+    /* Privacy policy section */
+    .privacy-section {
+      background: linear-gradient(180deg, #f7f3eb 0%, #efe9dd 100%);
+      color: var(--navy);
+      padding: 76px 0;
+      border-top: 1px solid rgba(11,23,38,.08);
+    }
+    .privacy-card {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(11,23,38,.08);
+      border-radius: var(--radius-lg);
+      padding: 46px;
+      box-shadow: 0 22px 72px rgba(11,23,38,.08);
+    }
+    .privacy-card h2 {
+      margin: 8px 0 10px;
+      color: var(--navy);
+    }
+    .privacy-updated {
+      margin: 0 0 24px;
+      color: rgba(11,23,38,.56);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .privacy-intro {
+      max-width: 860px;
+      margin: 0 0 30px;
+      color: var(--graphite);
+      line-height: 1.68;
+      font-size: 16px;
+    }
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .privacy-item {
+      padding: 22px;
+      border-radius: var(--radius-sm);
+      background: #fff;
+      border: 1px solid rgba(11,23,38,.07);
+    }
+    .privacy-item h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.02em;
+      color: var(--navy);
+    }
+    .privacy-item p {
+      margin: 0;
+      color: var(--graphite);
+      line-height: 1.62;
+      font-size: 14.5px;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--ivory);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(184,155,94,.55);
+      padding-bottom: 2px;
+      font-weight: 700;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    @media (max-width: 720px) {
+      .privacy-section { padding: 62px 0; }
+      .privacy-card { padding: 26px; border-radius: 24px; }
+      .privacy-grid { grid-template-columns: 1fr; }
+      .privacy-item { padding: 18px; }
+      .footer-links { justify-content: flex-start; }
+    }
+
+
     @media (max-width: 390px) {
       .hero h1 { font-size: clamp(28px, 8.6vw, 34px); line-height: 1.1; letter-spacing: -.025em; }
       .hero-lead { font-size: 15.5px; }
@@ -856,10 +937,34 @@
       </section>
     </main>
 
+
+    <section class="privacy-section" id="privacy" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="privacy-card">
+          <div class="label" data-i18n="privacyLabel">Data protection</div>
+          <h2 id="privacy-title" data-i18n="privacyTitle">Privacy Policy</h2>
+          <p class="privacy-updated" data-i18n="privacyUpdated">Last updated: 15 June 2026</p>
+          <p class="privacy-intro" data-i18n="privacyIntro">This policy explains how DK TEX processes personal data on this website and when communicating with potential or existing business partners. It is prepared for a business-card website operated from Latvia and follows the principles of the EU GDPR and Latvian data protection rules.</p>
+          <div class="privacy-grid">
+            <article class="privacy-item"><h3 data-i18n="privacyControllerTitle">Controller</h3><p data-i18n="privacyControllerText">The data controller is Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registration No. 40203385369, legal address: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Contact: info@dktex.lv.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyDataTitle">Personal data we may process</h3><p data-i18n="privacyDataText">We may process your name, company, position, e-mail address, phone number, message content, project information you send to us, and basic technical data needed to operate and protect the website.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyPurposeTitle">Purposes</h3><p data-i18n="privacyPurposeText">Data is processed to respond to enquiries, discuss cooperation, prepare production communication, maintain business correspondence, operate the website and meet applicable legal obligations.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyLegalTitle">Legal basis</h3><p data-i18n="privacyLegalText">Depending on the situation, the legal basis may be pre-contractual steps, contract performance, legitimate business interests, consent, or compliance with legal obligations.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyCookiesTitle">Cookies and language preference</h3><p data-i18n="privacyCookiesText">This website does not use marketing cookies. It may store your selected language in the browser and process basic technical information necessary for website operation. If analytics or advertising tools are added later, this policy and cookie settings must be updated.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacySharingTitle">Recipients</h3><p data-i18n="privacySharingText">Personal data may be shared only with service providers such as hosting or e-mail providers, professional advisers, authorities where required by law, or business partners when necessary for a cooperation discussion. We do not sell personal data.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyRetentionTitle">Retention</h3><p data-i18n="privacyRetentionText">We keep personal data only as long as needed for the relevant purpose, ongoing communication, legal requirements or the protection of legitimate interests. Business correspondence is reviewed periodically.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyRightsTitle">Your rights</h3><p data-i18n="privacyRightsText">You may request access, correction, deletion, restriction, portability, object to processing, or withdraw consent where applicable. You also have the right to complain to the Data State Inspectorate of Latvia.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyContactTitle">Contact</h3><p data-i18n="privacyContactText">To exercise your rights or ask about data processing, contact DK TEX at info@dktex.lv.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="container footer-inner">
         <div><strong>DK TEX</strong> · <span data-i18n="brandTagline">Sewing Production Latvia</span></div>
         <div data-i18n="footerContinuity">Continuing the production experience of SIA FIRMA JATA</div>
+        <nav class="footer-links" aria-label="Footer links"><a href="#privacy" data-i18n="privacyFooterLink">Privacy Policy</a></nav>
       </div>
     </footer>
   </div>
@@ -957,6 +1062,29 @@
             "formText": "To make communication efficient, please include product type, approximate quantity, specifications or photos, preferred timing and any relevant production details.",
             "formNote": "This website is prepared as a business-card site for DK TEX. Replace the placeholder phone number, e-mail and website with confirmed company details before publishing.",
             "sendEmail": "Send e-mail",
+            "privacyFooterLink": "Privacy Policy",
+            "privacyLabel": "Data protection",
+            "privacyTitle": "Privacy Policy",
+            "privacyUpdated": "Last updated: 15 June 2026",
+            "privacyIntro": "This policy explains how DK TEX processes personal data on this website and when communicating with potential or existing business partners. It is prepared for a business-card website operated from Latvia and follows the principles of the EU GDPR and Latvian data protection rules.",
+            "privacyControllerTitle": "Controller",
+            "privacyControllerText": "The data controller is Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registration No. 40203385369, legal address: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Contact: info@dktex.lv.",
+            "privacyDataTitle": "Personal data we may process",
+            "privacyDataText": "We may process your name, company, position, e-mail address, phone number, message content, project information you send to us, and basic technical data needed to operate and protect the website.",
+            "privacyPurposeTitle": "Purposes",
+            "privacyPurposeText": "Data is processed to respond to enquiries, discuss cooperation, prepare production communication, maintain business correspondence, operate the website and meet applicable legal obligations.",
+            "privacyLegalTitle": "Legal basis",
+            "privacyLegalText": "Depending on the situation, the legal basis may be pre-contractual steps, contract performance, legitimate business interests, consent, or compliance with legal obligations.",
+            "privacyCookiesTitle": "Cookies and language preference",
+            "privacyCookiesText": "This website does not use marketing cookies. It may store your selected language in the browser and process basic technical information necessary for website operation. If analytics or advertising tools are added later, this policy and cookie settings must be updated.",
+            "privacySharingTitle": "Recipients",
+            "privacySharingText": "Personal data may be shared only with service providers such as hosting or e-mail providers, professional advisers, authorities where required by law, or business partners when necessary for a cooperation discussion. We do not sell personal data.",
+            "privacyRetentionTitle": "Retention",
+            "privacyRetentionText": "We keep personal data only as long as needed for the relevant purpose, ongoing communication, legal requirements or the protection of legitimate interests. Business correspondence is reviewed periodically.",
+            "privacyRightsTitle": "Your rights",
+            "privacyRightsText": "You may request access, correction, deletion, restriction, portability, object to processing, or withdraw consent where applicable. You also have the right to complain to the Data State Inspectorate of Latvia.",
+            "privacyContactTitle": "Contact",
+            "privacyContactText": "To exercise your rights or ask about data processing, contact DK TEX at info@dktex.lv.",
             "footerContinuity": "Continuing the production experience of SIA FIRMA JATA"
       },
       "nb": {
@@ -1039,6 +1167,29 @@
             "formText": "For effektiv kommunikasjon, inkluder gjerne produkttype, omtrentlig mengde, spesifikasjoner eller bilder, ønsket tidspunkt og relevante produksjonsdetaljer.",
             "formNote": "Dette nettstedet er utarbeidet som en visittkortside for DK TEX. Erstatt plassholder for telefonnummer, e-post og nettsted med bekreftede selskapsopplysninger før publisering.",
             "sendEmail": "Send e-post",
+            "privacyFooterLink": "Personvernerklæring",
+            "privacyLabel": "Personvern",
+            "privacyTitle": "Personvernerklæring",
+            "privacyUpdated": "Sist oppdatert: 15. juni 2026",
+            "privacyIntro": "Denne erklæringen forklarer hvordan DK TEX behandler personopplysninger på dette nettstedet og i kommunikasjon med potensielle eller eksisterende forretningspartnere. Den er utarbeidet for et visittkortnettsted drevet fra Latvia og følger prinsippene i EU GDPR og latviske regler for personvern.",
+            "privacyControllerTitle": "Behandlingsansvarlig",
+            "privacyControllerText": "Behandlingsansvarlig er Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registreringsnummer 40203385369, juridisk adresse: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Kontakt: info@dktex.lv.",
+            "privacyDataTitle": "Personopplysninger vi kan behandle",
+            "privacyDataText": "Vi kan behandle navn, selskap, stilling, e-postadresse, telefonnummer, meldingsinnhold, prosjektinformasjon du sender til oss, og grunnleggende tekniske data som trengs for å drive og beskytte nettstedet.",
+            "privacyPurposeTitle": "Formål",
+            "privacyPurposeText": "Data behandles for å svare på henvendelser, diskutere samarbeid, forberede produksjonskommunikasjon, vedlikeholde forretningskorrespondanse, drifte nettstedet og oppfylle gjeldende juridiske forpliktelser.",
+            "privacyLegalTitle": "Rettslig grunnlag",
+            "privacyLegalText": "Avhengig av situasjonen kan det rettslige grunnlaget være tiltak før avtale, oppfyllelse av avtale, berettigede forretningsinteresser, samtykke eller oppfyllelse av juridiske forpliktelser.",
+            "privacyCookiesTitle": "Informasjonskapsler og språkvalg",
+            "privacyCookiesText": "Dette nettstedet bruker ikke markedsføringscookies. Det kan lagre valgt språk i nettleseren og behandle grunnleggende teknisk informasjon som er nødvendig for driften av nettstedet. Hvis analyse- eller annonseverktøy legges til senere, må denne erklæringen og cookie-innstillingene oppdateres.",
+            "privacySharingTitle": "Mottakere",
+            "privacySharingText": "Personopplysninger kan kun deles med tjenesteleverandører som hosting- eller e-postleverandører, profesjonelle rådgivere, myndigheter der loven krever det, eller forretningspartnere når det er nødvendig for en samarbeidsdialog. Vi selger ikke personopplysninger.",
+            "privacyRetentionTitle": "Lagringstid",
+            "privacyRetentionText": "Vi lagrer personopplysninger bare så lenge det er nødvendig for det aktuelle formålet, pågående kommunikasjon, lovkrav eller vern av berettigede interesser. Forretningskorrespondanse gjennomgås jevnlig.",
+            "privacyRightsTitle": "Dine rettigheter",
+            "privacyRightsText": "Du kan be om innsyn, retting, sletting, begrensning, dataportabilitet, protestere mot behandling eller trekke tilbake samtykke der dette gjelder. Du har også rett til å klage til Latvias datatilsyn, Data State Inspectorate.",
+            "privacyContactTitle": "Kontakt",
+            "privacyContactText": "For å utøve dine rettigheter eller stille spørsmål om databehandling, kontakt DK TEX på info@dktex.lv.",
             "footerContinuity": "Viderefører produksjonserfaringen fra SIA FIRMA JATA"
       },
       "sv": {
@@ -1121,6 +1272,29 @@
             "formText": "För effektiv kommunikation, ange gärna produkttyp, ungefärlig kvantitet, specifikationer eller bilder, önskad tidplan och relevanta produktionsdetaljer.",
             "formNote": "Denna webbplats är framtagen som en visitkortssida för DK TEX. Ersätt platshållare för telefonnummer, e-post och webbplats med bekräftade företagsuppgifter före publicering.",
             "sendEmail": "Skicka e-post",
+            "privacyFooterLink": "Integritetspolicy",
+            "privacyLabel": "Dataskydd",
+            "privacyTitle": "Integritetspolicy",
+            "privacyUpdated": "Senast uppdaterad: 15 juni 2026",
+            "privacyIntro": "Denna policy förklarar hur DK TEX behandlar personuppgifter på denna webbplats och vid kommunikation med potentiella eller befintliga affärspartner. Den är framtagen för en visitkortswebbplats som drivs från Lettland och följer principerna i EU:s GDPR och lettiska dataskyddsregler.",
+            "privacyControllerTitle": "Personuppgiftsansvarig",
+            "privacyControllerText": "Personuppgiftsansvarig är Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registreringsnummer 40203385369, juridisk adress: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Lettland. Kontakt: info@dktex.lv.",
+            "privacyDataTitle": "Personuppgifter vi kan behandla",
+            "privacyDataText": "Vi kan behandla ditt namn, företag, befattning, e-postadress, telefonnummer, meddelandeinnehåll, projektinformation som du skickar till oss samt grundläggande tekniska data som behövs för att driva och skydda webbplatsen.",
+            "privacyPurposeTitle": "Ändamål",
+            "privacyPurposeText": "Uppgifter behandlas för att besvara förfrågningar, diskutera samarbete, förbereda produktionskommunikation, hantera affärskorrespondens, driva webbplatsen och uppfylla tillämpliga rättsliga skyldigheter.",
+            "privacyLegalTitle": "Rättslig grund",
+            "privacyLegalText": "Beroende på situationen kan den rättsliga grunden vara åtgärder före avtal, fullgörande av avtal, berättigade affärsintressen, samtycke eller uppfyllande av rättsliga skyldigheter.",
+            "privacyCookiesTitle": "Cookies och språkval",
+            "privacyCookiesText": "Denna webbplats använder inte marknadsföringscookies. Den kan spara ditt valda språk i webbläsaren och behandla grundläggande teknisk information som är nödvändig för webbplatsens drift. Om analys- eller annonseringsverktyg läggs till senare måste denna policy och cookieinställningarna uppdateras.",
+            "privacySharingTitle": "Mottagare",
+            "privacySharingText": "Personuppgifter kan endast delas med tjänsteleverantörer som hosting- eller e-postleverantörer, professionella rådgivare, myndigheter när lagen kräver det, eller affärspartner när det behövs för en samarbetsdiskussion. Vi säljer inte personuppgifter.",
+            "privacyRetentionTitle": "Lagringstid",
+            "privacyRetentionText": "Vi sparar personuppgifter endast så länge det behövs för det aktuella ändamålet, pågående kommunikation, rättsliga krav eller skydd av berättigade intressen. Affärskorrespondens granskas regelbundet.",
+            "privacyRightsTitle": "Dina rättigheter",
+            "privacyRightsText": "Du kan begära tillgång, rättelse, radering, begränsning, dataportabilitet, invända mot behandling eller återkalla samtycke där det är tillämpligt. Du har också rätt att klaga till Lettlands dataskyddsmyndighet, Data State Inspectorate.",
+            "privacyContactTitle": "Kontakt",
+            "privacyContactText": "För att utöva dina rättigheter eller ställa frågor om databehandling, kontakta DK TEX på info@dktex.lv.",
             "footerContinuity": "Fortsätter produktionserfarenheten från SIA FIRMA JATA"
       },
       "fi": {
@@ -1203,6 +1377,29 @@
             "formText": "Jotta viestintä olisi tehokasta, ilmoittakaa tuotetyyppi, arvioitu määrä, erittelyt tai kuvat, toivottu aikataulu ja muut olennaiset tuotantotiedot.",
             "formNote": "Tämä verkkosivusto on valmisteltu DK TEXin käyntikorttisivuksi. Korvaa puhelinnumeron, sähköpostin ja verkkosivuston paikkamerkit vahvistetuilla yritystiedoilla ennen julkaisua.",
             "sendEmail": "Lähetä sähköposti",
+            "privacyFooterLink": "Tietosuojakäytäntö",
+            "privacyLabel": "Tietosuoja",
+            "privacyTitle": "Tietosuojakäytäntö",
+            "privacyUpdated": "Päivitetty viimeksi: 15. kesäkuuta 2026",
+            "privacyIntro": "Tämä käytäntö selittää, miten DK TEX käsittelee henkilötietoja tällä verkkosivustolla ja viestiessään mahdollisten tai nykyisten liikekumppaneiden kanssa. Se on laadittu Latviasta ylläpidettävälle käyntikorttisivustolle ja noudattaa EU:n GDPR:n sekä Latvian tietosuojasääntöjen periaatteita.",
+            "privacyControllerTitle": "Rekisterinpitäjä",
+            "privacyControllerText": "Rekisterinpitäjä on Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), rekisterinumero 40203385369, virallinen osoite: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Yhteys: info@dktex.lv.",
+            "privacyDataTitle": "Henkilötiedot, joita voimme käsitellä",
+            "privacyDataText": "Voimme käsitellä nimeäsi, yritystäsi, asemaasi, sähköpostiosoitettasi, puhelinnumeroasi, viestisi sisältöä, meille lähettämiäsi projektitietoja sekä verkkosivuston käyttöön ja suojaamiseen tarvittavia teknisiä perustietoja.",
+            "privacyPurposeTitle": "Käyttötarkoitukset",
+            "privacyPurposeText": "Tietoja käsitellään yhteydenottoihin vastaamiseksi, yhteistyöstä keskustelemiseksi, tuotantoviestinnän valmistelemiseksi, liikekirjeenvaihdon ylläpitämiseksi, verkkosivuston käyttämiseksi ja sovellettavien lakisääteisten velvoitteiden täyttämiseksi.",
+            "privacyLegalTitle": "Oikeusperuste",
+            "privacyLegalText": "Tilanteesta riippuen oikeusperuste voi olla sopimusta edeltävät toimet, sopimuksen täytäntöönpano, oikeutettu liiketoimintaetu, suostumus tai lakisääteisten velvoitteiden noudattaminen.",
+            "privacyCookiesTitle": "Evästeet ja kielivalinta",
+            "privacyCookiesText": "Tämä verkkosivusto ei käytä markkinointievästeitä. Se voi tallentaa valitsemasi kielen selaimeen ja käsitellä verkkosivuston toiminnan kannalta välttämättömiä teknisiä perustietoja. Jos analytiikka- tai mainostyökaluja lisätään myöhemmin, tätä käytäntöä ja evästeasetuksia on päivitettävä.",
+            "privacySharingTitle": "Vastaanottajat",
+            "privacySharingText": "Henkilötietoja voidaan jakaa vain palveluntarjoajille, kuten hosting- tai sähköpostipalveluille, ammatillisille neuvonantajille, viranomaisille lain edellyttäessä tai liikekumppaneille, kun se on tarpeen yhteistyökeskustelua varten. Emme myy henkilötietoja.",
+            "privacyRetentionTitle": "Säilytysaika",
+            "privacyRetentionText": "Säilytämme henkilötietoja vain niin kauan kuin se on tarpeen kyseiseen tarkoitukseen, meneillään olevaan viestintään, lakisääteisiin vaatimuksiin tai oikeutettujen etujen suojaamiseen. Liikekirjeenvaihtoa tarkastellaan säännöllisesti.",
+            "privacyRightsTitle": "Oikeutesi",
+            "privacyRightsText": "Voit pyytää pääsyä tietoihin, oikaisua, poistamista, käsittelyn rajoittamista, tietojen siirrettävyyttä, vastustaa käsittelyä tai peruuttaa suostumuksen soveltuvin osin. Sinulla on myös oikeus tehdä valitus Latvian tietosuojaviranomaiselle, Data State Inspectoratelle.",
+            "privacyContactTitle": "Yhteys",
+            "privacyContactText": "Käyttääksesi oikeuksiasi tai kysyäksesi tietojen käsittelystä, ota yhteyttä DK TEXiin osoitteessa info@dktex.lv.",
             "footerContinuity": "Jatkaa SIA FIRMA JATAn tuotantokokemusta"
       },
       "et": {
@@ -1285,6 +1482,29 @@
             "formText": "Tõhusa suhtluse jaoks lisage palun toote tüüp, ligikaudne kogus, spetsifikatsioonid või fotod, soovitud ajakava ja muud asjakohased tootmisdetailid.",
             "formNote": "See veebisait on koostatud DK TEXi visiitkaardilehena. Enne avaldamist asendage telefoni, e-posti ja veebisaidi kohatäited kinnitatud ettevõtteandmetega.",
             "sendEmail": "Saada e-kiri",
+            "privacyFooterLink": "Privaatsuspoliitika",
+            "privacyLabel": "Andmekaitse",
+            "privacyTitle": "Privaatsuspoliitika",
+            "privacyUpdated": "Viimati uuendatud: 15. juuni 2026",
+            "privacyIntro": "See poliitika selgitab, kuidas DK TEX töötleb isikuandmeid sellel veebilehel ning suhtluses võimalike või olemasolevate äripartneritega. See on koostatud Lätist hallatava visiitkaardilehe jaoks ning järgib EL-i GDPR-i ja Läti andmekaitsereeglite põhimõtteid.",
+            "privacyControllerTitle": "Vastutav töötleja",
+            "privacyControllerText": "Vastutav töötleja on Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registrikood 40203385369, juriidiline aadress: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Läti. Kontakt: info@dktex.lv.",
+            "privacyDataTitle": "Isikuandmed, mida võime töödelda",
+            "privacyDataText": "Võime töödelda teie nime, ettevõtet, ametikohta, e-posti aadressi, telefoninumbrit, sõnumi sisu, meile saadetud projektiteavet ning veebilehe toimimiseks ja kaitsmiseks vajalikke tehnilisi põhiandmeid.",
+            "privacyPurposeTitle": "Eesmärgid",
+            "privacyPurposeText": "Andmeid töödeldakse päringutele vastamiseks, koostöö arutamiseks, tootmiskommunikatsiooni ettevalmistamiseks, ärikirjavahetuse pidamiseks, veebilehe käitamiseks ja kohaldatavate õiguslike kohustuste täitmiseks.",
+            "privacyLegalTitle": "Õiguslik alus",
+            "privacyLegalText": "Olenevalt olukorrast võib õiguslik alus olla lepingueelsed toimingud, lepingu täitmine, õigustatud ärihuvid, nõusolek või õiguslike kohustuste täitmine.",
+            "privacyCookiesTitle": "Küpsised ja keele-eelistus",
+            "privacyCookiesText": "See veebileht ei kasuta turundusküpsiseid. See võib salvestada teie valitud keele brauseris ja töödelda veebilehe toimimiseks vajalikke tehnilisi põhiandmeid. Kui hiljem lisatakse analüütika- või reklaamitööriistad, tuleb seda poliitikat ja küpsiste seadeid uuendada.",
+            "privacySharingTitle": "Vastuvõtjad",
+            "privacySharingText": "Isikuandmeid võib jagada ainult teenusepakkujatega, nagu majutus- või e-posti teenusepakkujad, professionaalsete nõustajatega, ametiasutustega seaduse nõudmisel või äripartneritega, kui see on vajalik koostööaruteluks. Me ei müü isikuandmeid.",
+            "privacyRetentionTitle": "Säilitamine",
+            "privacyRetentionText": "Säilitame isikuandmeid ainult nii kaua, kui see on vajalik vastava eesmärgi, jooksva suhtluse, õiguslike nõuete või õigustatud huvide kaitsmise jaoks. Ärialast kirjavahetust vaadatakse perioodiliselt üle.",
+            "privacyRightsTitle": "Teie õigused",
+            "privacyRightsText": "Teil on õigus taotleda juurdepääsu, parandamist, kustutamist, piiramist, andmete ülekandmist, esitada vastuväiteid töötlemisele või võtta nõusolek tagasi, kui see on kohaldatav. Teil on ka õigus esitada kaebus Läti andmekaitseasutusele, Data State Inspectorate.",
+            "privacyContactTitle": "Kontakt",
+            "privacyContactText": "Oma õiguste kasutamiseks või andmetöötluse kohta küsimiseks võtke ühendust DK TEXiga aadressil info@dktex.lv.",
             "footerContinuity": "Jätkame SIA FIRMA JATA tootmiskogemust"
       },
       "lv": {
@@ -1367,6 +1587,29 @@
             "formText": "Lai komunikācija būtu efektīva, lūdzu, norādiet produkta veidu, aptuveno daudzumu, specifikācijas vai fotoattēlus, vēlamo termiņu un citu būtisku ražošanas informāciju.",
             "formNote": "Šī mājaslapa ir sagatavota kā DK TEX vizītkartes vietne. Pirms publicēšanas aizstājiet tālruņa, e-pasta un mājaslapas vietturus ar apstiprinātiem uzņēmuma datiem.",
             "sendEmail": "Sūtīt e-pastu",
+            "privacyFooterLink": "Privātuma politika",
+            "privacyLabel": "Datu aizsardzība",
+            "privacyTitle": "Privātuma politika",
+            "privacyUpdated": "Pēdējoreiz atjaunināts: 2026. gada 15. jūnijā",
+            "privacyIntro": "Šī politika skaidro, kā DK TEX apstrādā personas datus šajā tīmekļvietnē un saziņā ar potenciālajiem vai esošajiem sadarbības partneriem. Tā ir sagatavota vizītkartes tipa tīmekļvietnei, kas tiek uzturēta Latvijā, ievērojot ES VDAR un Latvijas datu aizsardzības noteikumu principus.",
+            "privacyControllerTitle": "Pārzinis",
+            "privacyControllerText": "Pārzinis ir Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), reģistrācijas Nr. 40203385369, juridiskā adrese: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvija. Kontaktinformācija: info@dktex.lv.",
+            "privacyDataTitle": "Personas dati, kurus varam apstrādāt",
+            "privacyDataText": "Mēs varam apstrādāt jūsu vārdu, uzņēmumu, amatu, e-pasta adresi, tālruņa numuru, ziņojuma saturu, projekta informāciju, ko nosūtāt mums, kā arī pamata tehniskos datus, kas nepieciešami tīmekļvietnes darbībai un aizsardzībai.",
+            "privacyPurposeTitle": "Nolūki",
+            "privacyPurposeText": "Dati tiek apstrādāti, lai atbildētu uz pieprasījumiem, apspriestu sadarbību, sagatavotu ražošanas komunikāciju, uzturētu lietišķo saraksti, nodrošinātu tīmekļvietnes darbību un izpildītu piemērojamās juridiskās saistības.",
+            "privacyLegalTitle": "Tiesiskais pamats",
+            "privacyLegalText": "Atkarībā no situācijas tiesiskais pamats var būt pirmslīguma darbības, līguma izpilde, leģitīmas komercintereses, piekrišana vai juridisko pienākumu izpilde.",
+            "privacyCookiesTitle": "Sīkdatnes un valodas izvēle",
+            "privacyCookiesText": "Šī tīmekļvietne neizmanto mārketinga sīkdatnes. Tā var saglabāt jūsu izvēlēto valodu pārlūkprogrammā un apstrādāt pamata tehnisko informāciju, kas nepieciešama tīmekļvietnes darbībai. Ja vēlāk tiek pievienoti analītikas vai reklāmas rīki, šī politika un sīkdatņu iestatījumi ir jāatjaunina.",
+            "privacySharingTitle": "Saņēmēji",
+            "privacySharingText": "Personas dati var tikt kopīgoti tikai ar pakalpojumu sniedzējiem, piemēram, hostinga vai e-pasta pakalpojumu sniedzējiem, profesionāliem konsultantiem, iestādēm, ja to prasa likums, vai sadarbības partneriem, ja tas nepieciešams sadarbības apspriešanai. Mēs nepārdodam personas datus.",
+            "privacyRetentionTitle": "Glabāšana",
+            "privacyRetentionText": "Mēs glabājam personas datus tikai tik ilgi, cik tas nepieciešams attiecīgajam nolūkam, pašreizējai saziņai, juridiskajām prasībām vai leģitīmo interešu aizsardzībai. Lietišķā sarakste tiek periodiski pārskatīta.",
+            "privacyRightsTitle": "Jūsu tiesības",
+            "privacyRightsText": "Jūs varat pieprasīt piekļuvi, labošanu, dzēšanu, apstrādes ierobežošanu, datu pārnesamību, iebilst pret apstrādi vai atsaukt piekrišanu, ja tas ir piemērojams. Jums ir arī tiesības iesniegt sūdzību Latvijas Datu valsts inspekcijai.",
+            "privacyContactTitle": "Kontaktinformācija",
+            "privacyContactText": "Lai izmantotu savas tiesības vai uzdotu jautājumus par datu apstrādi, sazinieties ar DK TEX: info@dktex.lv.",
             "footerContinuity": "Turpinām SIA FIRMA JATA ražošanas pieredzi"
       },
       "lt": {
@@ -1449,6 +1692,29 @@
             "formText": "Kad komunikacija būtų efektyvi, nurodykite gaminio tipą, apytikslį kiekį, specifikacijas ar nuotraukas, pageidaujamą terminą ir kitas svarbias gamybos detales.",
             "formNote": "Ši svetainė parengta kaip DK TEX vizitinė svetainė. Prieš publikuodami pakeiskite telefono numerio, el. pašto ir svetainės vietaženklius patvirtintais įmonės duomenimis.",
             "sendEmail": "Siųsti el. laišką",
+            "privacyFooterLink": "Privatumo politika",
+            "privacyLabel": "Duomenų apsauga",
+            "privacyTitle": "Privatumo politika",
+            "privacyUpdated": "Paskutinį kartą atnaujinta: 2026 m. birželio 15 d.",
+            "privacyIntro": "Šioje politikoje paaiškinama, kaip DK TEX tvarko asmens duomenis šioje svetainėje ir bendraudama su potencialiais ar esamais verslo partneriais. Ji parengta vizitinės kortelės tipo svetainei, valdomai iš Latvijos, ir vadovaujasi ES GDPR bei Latvijos duomenų apsaugos taisyklių principais.",
+            "privacyControllerTitle": "Duomenų valdytojas",
+            "privacyControllerText": "Duomenų valdytojas yra Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registracijos Nr. 40203385369, juridinis adresas: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvija. Kontaktas: info@dktex.lv.",
+            "privacyDataTitle": "Asmens duomenys, kuriuos galime tvarkyti",
+            "privacyDataText": "Galime tvarkyti jūsų vardą, įmonę, pareigas, el. pašto adresą, telefono numerį, pranešimo turinį, mums siunčiamą projekto informaciją ir pagrindinius techninius duomenis, reikalingus svetainei veikti ir apsaugoti.",
+            "privacyPurposeTitle": "Tikslai",
+            "privacyPurposeText": "Duomenys tvarkomi siekiant atsakyti į užklausas, aptarti bendradarbiavimą, parengti gamybinę komunikaciją, palaikyti verslo susirašinėjimą, valdyti svetainę ir vykdyti taikomus teisinius įsipareigojimus.",
+            "privacyLegalTitle": "Teisinis pagrindas",
+            "privacyLegalText": "Priklausomai nuo situacijos, teisinis pagrindas gali būti ikisutartiniai veiksmai, sutarties vykdymas, teisėti verslo interesai, sutikimas arba teisinių įsipareigojimų vykdymas.",
+            "privacyCookiesTitle": "Slapukai ir kalbos pasirinkimas",
+            "privacyCookiesText": "Ši svetainė nenaudoja rinkodaros slapukų. Ji gali išsaugoti jūsų pasirinktą kalbą naršyklėje ir tvarkyti pagrindinę techninę informaciją, reikalingą svetainės veikimui. Jei vėliau bus pridėti analizės ar reklamos įrankiai, ši politika ir slapukų nustatymai turi būti atnaujinti.",
+            "privacySharingTitle": "Gavėjai",
+            "privacySharingText": "Asmens duomenys gali būti perduodami tik paslaugų teikėjams, pavyzdžiui, prieglobos ar el. pašto paslaugų teikėjams, profesionaliems konsultantams, institucijoms, kai to reikalauja įstatymai, arba verslo partneriams, kai tai būtina bendradarbiavimo aptarimui. Mes neparduodame asmens duomenų.",
+            "privacyRetentionTitle": "Saugojimas",
+            "privacyRetentionText": "Asmens duomenis saugome tik tiek laiko, kiek reikia atitinkamam tikslui, vykstančiai komunikacijai, teisiniams reikalavimams ar teisėtų interesų apsaugai. Verslo susirašinėjimas periodiškai peržiūrimas.",
+            "privacyRightsTitle": "Jūsų teisės",
+            "privacyRightsText": "Galite prašyti susipažinti su duomenimis, juos ištaisyti, ištrinti, apriboti tvarkymą, perkelti duomenis, nesutikti su tvarkymu arba atšaukti sutikimą, kai tai taikoma. Taip pat turite teisę pateikti skundą Latvijos duomenų valstybinei inspekcijai.",
+            "privacyContactTitle": "Kontaktas",
+            "privacyContactText": "Norėdami pasinaudoti savo teisėmis arba paklausti apie duomenų tvarkymą, susisiekite su DK TEX adresu info@dktex.lv.",
             "footerContinuity": "Tęsiame SIA FIRMA JATA gamybos patirtį"
       },
       "de": {
@@ -1531,6 +1797,29 @@
             "formText": "Für eine effiziente Kommunikation nennen Sie bitte Produkttyp, ungefähre Menge, Spezifikationen oder Fotos, gewünschten Zeitrahmen und relevante Produktionsdetails.",
             "formNote": "Diese Website ist als Visitenkarten-Website für DK TEX vorbereitet. Ersetzen Sie die Platzhalter für Telefonnummer, E-Mail und Website vor der Veröffentlichung durch bestätigte Unternehmensdaten.",
             "sendEmail": "E-Mail senden",
+            "privacyFooterLink": "Datenschutzerklärung",
+            "privacyLabel": "Datenschutz",
+            "privacyTitle": "Datenschutzerklärung",
+            "privacyUpdated": "Zuletzt aktualisiert: 15. Juni 2026",
+            "privacyIntro": "Diese Erklärung erläutert, wie DK TEX personenbezogene Daten auf dieser Website und in der Kommunikation mit potenziellen oder bestehenden Geschäftspartnern verarbeitet. Sie wurde für eine aus Lettland betriebene Business-Card-Website erstellt und folgt den Grundsätzen der EU-DSGVO sowie der lettischen Datenschutzvorschriften.",
+            "privacyControllerTitle": "Verantwortlicher",
+            "privacyControllerText": "Verantwortlicher ist Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), Registernummer 40203385369, Geschäftsanschrift: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Lettland. Kontakt: info@dktex.lv.",
+            "privacyDataTitle": "Personenbezogene Daten, die wir verarbeiten können",
+            "privacyDataText": "Wir können Ihren Namen, Ihr Unternehmen, Ihre Position, Ihre E-Mail-Adresse, Telefonnummer, den Inhalt Ihrer Nachricht, von Ihnen übermittelte Projektinformationen sowie grundlegende technische Daten verarbeiten, die für den Betrieb und Schutz der Website erforderlich sind.",
+            "privacyPurposeTitle": "Zwecke",
+            "privacyPurposeText": "Daten werden verarbeitet, um Anfragen zu beantworten, Kooperationen zu besprechen, Produktionskommunikation vorzubereiten, Geschäftskorrespondenz zu führen, die Website zu betreiben und geltende rechtliche Verpflichtungen zu erfüllen.",
+            "privacyLegalTitle": "Rechtsgrundlage",
+            "privacyLegalText": "Je nach Situation kann die Rechtsgrundlage vorvertragliche Maßnahmen, Vertragserfüllung, berechtigte Geschäftsinteressen, Einwilligung oder die Erfüllung rechtlicher Verpflichtungen sein.",
+            "privacyCookiesTitle": "Cookies und Sprachauswahl",
+            "privacyCookiesText": "Diese Website verwendet keine Marketing-Cookies. Sie kann Ihre gewählte Sprache im Browser speichern und grundlegende technische Informationen verarbeiten, die für den Betrieb der Website erforderlich sind. Wenn später Analyse- oder Werbetools hinzugefügt werden, müssen diese Erklärung und die Cookie-Einstellungen aktualisiert werden.",
+            "privacySharingTitle": "Empfänger",
+            "privacySharingText": "Personenbezogene Daten können nur an Dienstleister wie Hosting- oder E-Mail-Anbieter, professionelle Berater, Behörden, soweit gesetzlich erforderlich, oder Geschäftspartner weitergegeben werden, wenn dies für ein Kooperationsgespräch erforderlich ist. Wir verkaufen keine personenbezogenen Daten.",
+            "privacyRetentionTitle": "Aufbewahrung",
+            "privacyRetentionText": "Wir speichern personenbezogene Daten nur so lange, wie es für den jeweiligen Zweck, laufende Kommunikation, gesetzliche Anforderungen oder den Schutz berechtigter Interessen erforderlich ist. Geschäftskorrespondenz wird regelmäßig überprüft.",
+            "privacyRightsTitle": "Ihre Rechte",
+            "privacyRightsText": "Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit verlangen, der Verarbeitung widersprechen oder eine Einwilligung widerrufen, soweit anwendbar. Sie haben außerdem das Recht, sich bei der lettischen Datenschutzaufsichtsbehörde Data State Inspectorate zu beschweren.",
+            "privacyContactTitle": "Kontakt",
+            "privacyContactText": "Um Ihre Rechte auszuüben oder Fragen zur Datenverarbeitung zu stellen, kontaktieren Sie DK TEX unter info@dktex.lv.",
             "footerContinuity": "Fortführung der Produktionserfahrung von SIA FIRMA JATA"
       },
       "pl": {
@@ -1613,6 +1902,29 @@
             "formText": "Aby komunikacja była efektywna, prosimy podać typ produktu, przybliżoną ilość, specyfikacje lub zdjęcia, preferowany termin i istotne szczegóły produkcyjne.",
             "formNote": "Ta strona została przygotowana jako wizytówka internetowa DK TEX. Przed publikacją należy zastąpić przykładowy numer telefonu, e-mail i adres strony potwierdzonymi danymi firmy.",
             "sendEmail": "Wyślij e-mail",
+            "privacyFooterLink": "Polityka prywatności",
+            "privacyLabel": "Ochrona danych",
+            "privacyTitle": "Polityka prywatności",
+            "privacyUpdated": "Ostatnia aktualizacja: 15 czerwca 2026 r.",
+            "privacyIntro": "Niniejsza polityka wyjaśnia, w jaki sposób DK TEX przetwarza dane osobowe na tej stronie internetowej oraz w komunikacji z potencjalnymi lub obecnymi partnerami biznesowymi. Została przygotowana dla strony wizytówkowej prowadzonej z Łotwy i opiera się na zasadach RODO oraz łotewskich przepisów o ochronie danych.",
+            "privacyControllerTitle": "Administrator",
+            "privacyControllerText": "Administratorem danych jest Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), numer rejestracyjny 40203385369, adres siedziby: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Łotwa. Kontakt: info@dktex.lv.",
+            "privacyDataTitle": "Dane osobowe, które możemy przetwarzać",
+            "privacyDataText": "Możemy przetwarzać imię i nazwisko, firmę, stanowisko, adres e-mail, numer telefonu, treść wiadomości, informacje o projekcie przesłane do nas oraz podstawowe dane techniczne potrzebne do działania i ochrony strony internetowej.",
+            "privacyPurposeTitle": "Cele",
+            "privacyPurposeText": "Dane są przetwarzane w celu odpowiadania na zapytania, omawiania współpracy, przygotowania komunikacji produkcyjnej, prowadzenia korespondencji biznesowej, obsługi strony internetowej i wypełniania obowiązujących obowiązków prawnych.",
+            "privacyLegalTitle": "Podstawa prawna",
+            "privacyLegalText": "W zależności od sytuacji podstawą prawną mogą być działania przed zawarciem umowy, wykonanie umowy, uzasadnione interesy biznesowe, zgoda lub wypełnienie obowiązków prawnych.",
+            "privacyCookiesTitle": "Pliki cookie i wybór języka",
+            "privacyCookiesText": "Ta strona nie używa marketingowych plików cookie. Może zapisywać wybrany język w przeglądarce i przetwarzać podstawowe informacje techniczne niezbędne do działania strony. Jeśli później zostaną dodane narzędzia analityczne lub reklamowe, niniejsza polityka i ustawienia cookie muszą zostać zaktualizowane.",
+            "privacySharingTitle": "Odbiorcy",
+            "privacySharingText": "Dane osobowe mogą być udostępniane wyłącznie usługodawcom, takim jak dostawcy hostingu lub poczty e-mail, profesjonalnym doradcom, organom, gdy wymaga tego prawo, lub partnerom biznesowym, gdy jest to niezbędne do rozmów o współpracy. Nie sprzedajemy danych osobowych.",
+            "privacyRetentionTitle": "Okres przechowywania",
+            "privacyRetentionText": "Przechowujemy dane osobowe tylko tak długo, jak jest to potrzebne do właściwego celu, bieżącej komunikacji, wymogów prawnych lub ochrony uzasadnionych interesów. Korespondencja biznesowa jest okresowo przeglądana.",
+            "privacyRightsTitle": "Twoje prawa",
+            "privacyRightsText": "Możesz żądać dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia danych, sprzeciwić się przetwarzaniu lub wycofać zgodę, gdy ma to zastosowanie. Masz również prawo złożyć skargę do łotewskiego organu ochrony danych, Data State Inspectorate.",
+            "privacyContactTitle": "Kontakt",
+            "privacyContactText": "Aby skorzystać ze swoich praw lub zapytać o przetwarzanie danych, skontaktuj się z DK TEX pod adresem info@dktex.lv.",
             "footerContinuity": "Kontynuacja doświadczenia produkcyjnego SIA FIRMA JATA"
       },
       "da": {
@@ -1695,6 +2007,29 @@
             "formText": "For effektiv kommunikation bedes I inkludere produkttype, omtrentlig mængde, specifikationer eller fotos, ønsket timing og relevante produktionsdetaljer.",
             "formNote": "Denne hjemmeside er udarbejdet som en visitkortside for DK TEX. Erstat pladsholdere for telefonnummer, e-mail og website med bekræftede virksomhedsoplysninger før publicering.",
             "sendEmail": "Send e-mail",
+            "privacyFooterLink": "Privatlivspolitik",
+            "privacyLabel": "Databeskyttelse",
+            "privacyTitle": "Privatlivspolitik",
+            "privacyUpdated": "Senest opdateret: 15. juni 2026",
+            "privacyIntro": "Denne politik forklarer, hvordan DK TEX behandler personoplysninger på dette websted og i kommunikationen med potentielle eller eksisterende forretningspartnere. Den er udarbejdet til et visitkortwebsted, der drives fra Letland, og følger principperne i EU GDPR og lettiske databeskyttelsesregler.",
+            "privacyControllerTitle": "Dataansvarlig",
+            "privacyControllerText": "Den dataansvarlige er Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registreringsnummer 40203385369, juridisk adresse: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Letland. Kontakt: info@dktex.lv.",
+            "privacyDataTitle": "Personoplysninger vi kan behandle",
+            "privacyDataText": "Vi kan behandle dit navn, virksomhed, stilling, e-mailadresse, telefonnummer, indholdet af din besked, projektoplysninger du sender til os, samt grundlæggende tekniske data, der er nødvendige for at drive og beskytte webstedet.",
+            "privacyPurposeTitle": "Formål",
+            "privacyPurposeText": "Data behandles for at besvare henvendelser, drøfte samarbejde, forberede produktionskommunikation, vedligeholde forretningskorrespondance, drive webstedet og opfylde gældende juridiske forpligtelser.",
+            "privacyLegalTitle": "Retsgrundlag",
+            "privacyLegalText": "Afhængigt af situationen kan retsgrundlaget være foranstaltninger forud for en kontrakt, opfyldelse af kontrakt, legitime forretningsinteresser, samtykke eller overholdelse af juridiske forpligtelser.",
+            "privacyCookiesTitle": "Cookies og sprogvalg",
+            "privacyCookiesText": "Dette websted bruger ikke marketingcookies. Det kan gemme dit valgte sprog i browseren og behandle grundlæggende teknisk information, der er nødvendig for webstedets drift. Hvis analyse- eller annonceringsværktøjer tilføjes senere, skal denne politik og cookieindstillingerne opdateres.",
+            "privacySharingTitle": "Modtagere",
+            "privacySharingText": "Personoplysninger kan kun deles med tjenesteudbydere såsom hosting- eller e-mailudbydere, professionelle rådgivere, myndigheder når loven kræver det, eller forretningspartnere når det er nødvendigt for en samarbejdsdialog. Vi sælger ikke personoplysninger.",
+            "privacyRetentionTitle": "Opbevaring",
+            "privacyRetentionText": "Vi opbevarer kun personoplysninger så længe, det er nødvendigt for det relevante formål, løbende kommunikation, juridiske krav eller beskyttelse af legitime interesser. Forretningskorrespondance gennemgås regelmæssigt.",
+            "privacyRightsTitle": "Dine rettigheder",
+            "privacyRightsText": "Du kan anmode om indsigt, berigtigelse, sletning, begrænsning, dataportabilitet, gøre indsigelse mod behandling eller trække samtykke tilbage, hvor det er relevant. Du har også ret til at klage til den lettiske databeskyttelsesmyndighed, Data State Inspectorate.",
+            "privacyContactTitle": "Kontakt",
+            "privacyContactText": "For at udøve dine rettigheder eller spørge om databehandling, kontakt DK TEX på info@dktex.lv.",
             "footerContinuity": "Viderefører produktionserfaringen fra SIA FIRMA JATA"
       }
 };
