@@ -579,6 +579,66 @@
       html[lang="da"] .hero h1 { font-size: 28px; }
     }
 
+
+    /* Mobile hardening v3: prevents long localized text from widening the viewport. */
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    .page { width: 100%; max-width: 100vw; overflow-x: clip; }
+    .container, .nav-shell, .hero-content, .hero-copy, .hero-card, .section-head, .split, .production-band, .contact-wrap { max-width: 100%; }
+    .hero-content, .split, .production-band, .contact-wrap { min-width: 0; }
+    .hero h1, h2, h3, .eyebrow, .hero-lead, .brand-word, .brand-word span, .btn, .hero-card-title span, .fact dd, .trust-item h3, .trust-item p, .service-card h3, .service-card p, .step h3, .step p, .contact-row a, .contact-row strong {
+      overflow-wrap: anywhere;
+      word-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
+      max-width: 100%;
+    }
+
+    @media (max-width: 840px) {
+      .hero-content { grid-template-columns: minmax(0, 1fr); }
+      .hero-card { width: 100%; justify-self: stretch; }
+    }
+
+    @media (max-width: 600px) {
+      .header { top: 8px; }
+      .nav-shell { width: calc(100vw - 16px); max-width: calc(100vw - 16px); gap: 7px; padding: 8px 8px 8px 10px; }
+      .brand { flex: 1 1 auto; min-width: 0; gap: 9px; }
+      .brand-mark { width: 38px; height: 28px; flex: 0 0 38px; }
+      .brand-word { min-width: 0; overflow: hidden; }
+      .brand-word strong { font-size: 13px; letter-spacing: .17em; white-space: nowrap; }
+      .brand-word span { display: none; }
+      .language-current { min-height: 36px; padding: 0 9px; gap: 6px; }
+      .language-current strong { font-size: 11px; }
+      .language-current svg { width: 12px; height: 12px; }
+      .menu-button { width: 38px; height: 38px; flex: 0 0 38px; }
+      .hero { padding-top: 112px; padding-bottom: 86px; }
+      .hero-content { gap: 34px; }
+      .eyebrow { font-size: 11px; letter-spacing: .14em; gap: 10px; margin-bottom: 18px; }
+      .eyebrow::before { width: 38px; }
+      .hero h1 { font-size: clamp(30px, 9.2vw, 38px); line-height: 1.08; letter-spacing: -.035em; max-width: calc(100vw - 32px); }
+      .hero-lead { font-size: 16px; line-height: 1.55; max-width: calc(100vw - 32px); }
+      .hero-actions { width: 100%; max-width: 100%; }
+      .btn { width: 100%; min-width: 0; padding-left: 14px; padding-right: 14px; }
+      .hero-card { padding: 18px; border-radius: 22px; }
+      .hero-card-title { gap: 12px; align-items: flex-start; }
+      .hero-card-title span { flex: 1 1 auto; min-width: 0; font-size: 13px; }
+      .seal { width: 54px; height: 54px; flex: 0 0 54px; font-size: 16px; }
+      .fact { grid-template-columns: minmax(0,1fr); gap: 7px; }
+      .fact dt { font-size: 11px; letter-spacing: .12em; }
+      .fact dd { font-size: 14px; }
+      h2 { font-size: clamp(28px, 8.6vw, 36px); line-height: 1.08; letter-spacing: -.035em; }
+      .nav-links { left: 8px; right: 8px; top: 64px; max-width: calc(100vw - 16px); }
+      .language-menu { right: 0; width: min(270px, calc(100vw - 16px)); max-width: calc(100vw - 16px); }
+    }
+
+    @media (max-width: 390px) {
+      .hero h1 { font-size: clamp(28px, 8.6vw, 34px); line-height: 1.1; letter-spacing: -.025em; }
+      .hero-lead { font-size: 15.5px; }
+      .brand-mark { width: 34px; flex-basis: 34px; }
+      .brand-word strong { font-size: 12px; letter-spacing: .13em; }
+      .language-current { padding: 0 8px; }
+      .menu-button { width: 36px; height: 36px; flex-basis: 36px; }
+    }
+
   </style>
 </head>
 <body>
@@ -632,7 +692,7 @@
         <div class="container hero-content">
           <div>
             <div class="eyebrow" data-i18n="heroEyebrow">Sewing Production Latvia</div>
-            <h1 data-i18n="heroTitle">Sewing production partner from Latvia</h1>
+            <h1 data-i18n="heroTitle">Sewing production from Latvia</h1>
             <p class="hero-lead" data-i18n="heroLead">DK TEX continues the long-standing European manufacturing experience and client relationships established by SIA FIRMA JATA.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="mailto:info@dktex.lv" data-i18n="heroPrimary">Contact DK TEX</a>
@@ -829,7 +889,7 @@
             "navContact": "Contact",
             "navContactCta": "Contact us",
             "heroEyebrow": "Sewing Production Latvia",
-            "heroTitle": "Sewing production partner from Latvia",
+            "heroTitle": "Sewing production from Latvia",
             "heroLead": "DK TEX continues the long-standing European manufacturing experience and client relationships established by SIA FIRMA JATA.",
             "heroPrimary": "Contact DK TEX",
             "productionCapabilities": "Production capabilities",
@@ -911,7 +971,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Kontakt oss",
             "heroEyebrow": "Sømproduksjon Latvia",
-            "heroTitle": "Produksjonspartner innen søm fra Latvia",
+            "heroTitle": "Sømproduksjon fra Latvia",
             "heroLead": "DK TEX viderefører den langvarige europeiske produksjonserfaringen og kunderelasjonene etablert av SIA FIRMA JATA.",
             "heroPrimary": "Kontakt DK TEX",
             "productionCapabilities": "Produksjonsmuligheter",
@@ -993,7 +1053,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Kontakta oss",
             "heroEyebrow": "Sömnadsproduktion Lettland",
-            "heroTitle": "Sömnadsproduktion från Lettland",
+            "heroTitle": "Syproduktion från Lettland",
             "heroLead": "DK TEX fortsätter den långvariga europeiska produktionserfarenheten och kundrelationerna som etablerades av SIA FIRMA JATA.",
             "heroPrimary": "Kontakta DK TEX",
             "productionCapabilities": "Produktionskapacitet",
@@ -1075,7 +1135,7 @@
             "navContact": "Yhteys",
             "navContactCta": "Ota yhteyttä",
             "heroEyebrow": "Ompelutuotanto Latvia",
-            "heroTitle": "Ompelutuotannon kumppani Latviasta",
+            "heroTitle": "Ompelutuotanto Latviasta",
             "heroLead": "DK TEX jatkaa SIA FIRMA JATAn luomaa pitkäaikaista eurooppalaista tuotantokokemusta ja asiakassuhteita.",
             "heroPrimary": "Ota yhteyttä DK TEXiin",
             "productionCapabilities": "Tuotantomahdollisuudet",
@@ -1157,7 +1217,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Võtke ühendust",
             "heroEyebrow": "Õmblustootmine Lätis",
-            "heroTitle": "Õmblustootmise partner Lätist",
+            "heroTitle": "Õmblustootmine Lätist",
             "heroLead": "DK TEX jätkab SIA FIRMA JATA loodud pikaajalist Euroopa tootmiskogemust ja kliendisuhteid.",
             "heroPrimary": "Võtke ühendust DK TEXiga",
             "productionCapabilities": "Tootmisvõimalused",
@@ -1239,7 +1299,7 @@
             "navContact": "Kontakti",
             "navContactCta": "Sazināties",
             "heroEyebrow": "Šūšanas ražošana Latvijā",
-            "heroTitle": "Šūšanas ražošanas partneris no Latvijas",
+            "heroTitle": "Šūšanas ražošana Latvijā",
             "heroLead": "DK TEX turpina SIA FIRMA JATA izveidoto ilgtermiņa Eiropas ražošanas pieredzi un klientu attiecības.",
             "heroPrimary": "Sazināties ar DK TEX",
             "productionCapabilities": "Ražošanas iespējas",
@@ -1321,7 +1381,7 @@
             "navContact": "Kontaktai",
             "navContactCta": "Susisiekite",
             "heroEyebrow": "Siuvimo gamyba Latvijoje",
-            "heroTitle": "Siuvimo gamybos partneris iš Latvijos",
+            "heroTitle": "Siuvimo gamyba Latvijoje",
             "heroLead": "DK TEX tęsia ilgalaikę Europos gamybos patirtį ir klientų ryšius, sukurtus SIA FIRMA JATA.",
             "heroPrimary": "Susisiekti su DK TEX",
             "productionCapabilities": "Gamybos galimybės",
@@ -1485,7 +1545,7 @@
             "navContact": "Kontakt",
             "navContactCta": "Skontaktuj się",
             "heroEyebrow": "Produkcja szwalnicza Łotwa",
-            "heroTitle": "Partner produkcji szwalniczej z Łotwy",
+            "heroTitle": "Produkcja szwalnicza z Łotwy",
             "heroLead": "DK TEX kontynuuje wieloletnie europejskie doświadczenie produkcyjne i relacje z klientami zbudowane przez SIA FIRMA JATA.",
             "heroPrimary": "Skontaktuj się z DK TEX",
             "productionCapabilities": "Możliwości produkcyjne",
