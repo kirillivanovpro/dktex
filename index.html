@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DK TEX — Sewing Production Partner from Latvia</title>
+  <meta name="description" content="DK TEX is a Latvian sewing production company with long-standing European manufacturing experience and stable client relationships." />
   <meta name="theme-color" content="#0B1726" />
   <meta property="og:title" content="DK TEX — Sewing Production Partner from Latvia" />
   <meta property="og:description" content="Reliable sewing production, textile assembly and project-based manufacturing for European companies." />
@@ -347,28 +348,6 @@
     .split { display: grid; grid-template-columns: .92fr 1.08fr; gap: 72px; align-items: start; }
     .copy p { margin: 0 0 18px; color: var(--graphite); line-height: 1.75; font-size: 17px; }
     .copy p:last-child { margin-bottom: 0; }
-    .quote-card {
-      position: relative;
-      padding: 42px;
-      border-radius: var(--radius-lg);
-      background: var(--navy);
-      color: var(--ivory);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .quote-card::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      background:
-        radial-gradient(circle at 0 0, rgba(184,155,94,.25), transparent 32%),
-        linear-gradient(135deg, rgba(244, 240, 232, .08), transparent 48%);
-      pointer-events: none;
-    }
-    .quote-card > * { position: relative; z-index: 2; }
-    .quote-card h3 { margin: 0 0 18px; font-size: 28px; letter-spacing: -.03em; }
-    .quote-card p { margin: 0; color: rgba(244, 240, 232, .74); line-height: 1.7; font-size: 16px; }
-    .quote-line { width: 66px; height: 2px; background: var(--brass); margin-bottom: 30px; }
 
     .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
     .service-card {
@@ -462,12 +441,15 @@
     }
     .form-card h3 { margin: 0 0 12px; font-size: 28px; letter-spacing: -.03em; }
     .form-card p { margin: 0 0 28px; color: var(--graphite); line-height: 1.65; }
-    .form-note { padding: 16px 18px; border-radius: var(--radius-sm); background: #f7f3eb; color: var(--graphite); line-height: 1.55; font-size: 14px; border: 1px solid rgba(184,155,94,.22); }
     .mail-button { margin-top: 24px; width: 100%; }
 
-    .footer { background: var(--navy-3); color: rgba(244,240,232,.66); padding: 34px 0; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 13px; }
+    .footer { background: var(--navy-3); color: rgba(244,240,232,.66); padding: 34px 0 26px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; font-size: 13px; }
     .footer strong { color: var(--ivory); letter-spacing: .18em; }
+    .footer-company { display: grid; gap: 4px; line-height: 1.6; }
+    .footer-company a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid rgba(184,155,94,.55); padding-bottom: 1px; }
+    .footer-company a:hover { color: var(--brass-2); }
+    .footer-copy { margin-top: 18px; font-size: 12px; color: rgba(244,240,232,.45); }
 
     @media (max-width: 1020px) {
       .hero-content, .split, .production-band, .contact-wrap { grid-template-columns: 1fr; }
@@ -507,7 +489,7 @@
       .section { padding: 78px 0; }
       .section-head { margin-bottom: 36px; }
       h2 { font-size: 36px; }
-      .quote-card, .production-text, .contact-panel, .form-card { padding: 28px; }
+      .production-text, .contact-panel, .form-card { padding: 28px; }
       .production-visual { min-height: 250px; }
       .footer-inner { display: grid; }
     }
@@ -515,7 +497,7 @@
 
     /* Mobile language stability fix: prevents long Swedish, German and Danish words from breaking the layout. */
     body { overflow-x: hidden; }
-    .brand, .brand-word, .nav-links, .language-switcher, .hero-copy, .hero-card, .section-head, .service-card, .quote-card, .production-text, .contact-panel, .form-card { min-width: 0; }
+    .brand, .brand-word, .nav-links, .language-switcher, .hero-copy, .hero-card, .section-head, .service-card, .production-text, .contact-panel, .form-card { min-width: 0; }
     h1, h2, h3, .hero-lead, .section-head p, .btn, .nav-links a, .fact dd, .trust-item p, .service-card p, .step p, .contact-panel p, .form-card p {
       overflow-wrap: anywhere;
       word-break: normal;
@@ -545,9 +527,6 @@
       html[lang="sv"] .production-text h3,
       html[lang="de"] .production-text h3,
       html[lang="da"] .production-text h3,
-      html[lang="sv"] .quote-card h3,
-      html[lang="de"] .quote-card h3,
-      html[lang="da"] .quote-card h3,
       html[lang="sv"] .form-card h3,
       html[lang="de"] .form-card h3,
       html[lang="da"] .form-card h3 { font-size: clamp(22px, 6.6vw, 28px); line-height: 1.14; letter-spacing: -.025em; }
@@ -573,7 +552,7 @@
       html[lang="da"] .hero h1 { font-size: clamp(29px, 8.8vw, 34px); line-height: 1.1; letter-spacing: -.025em; }
       .hero-lead { font-size: 16px; }
       .hero-card { padding: 18px; border-radius: 22px; }
-      .quote-card, .production-text, .contact-panel, .form-card { padding: 24px; }
+      .production-text, .contact-panel, .form-card { padding: 24px; }
     }
 
     @media (max-width: 360px) {
@@ -707,7 +686,7 @@
       padding-bottom: 2px;
       font-weight: 700;
     }
-    .footer-links a:hover { color: var(--gold); }
+    .footer-links a:hover { color: var(--brass-2); }
 
     @media (max-width: 720px) {
       .privacy-section { padding: 62px 0; }
@@ -746,7 +725,6 @@
         <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
           <a href="#about" data-i18n="navAbout">About us</a>
           <a href="#production" data-i18n="navProduction">Production</a>
-          <a href="#jata" data-i18n="navJata">From SIA FIRMA JATA</a>
           <a href="#cooperation" data-i18n="navCooperation">Cooperation</a>
           <a href="#contact" data-i18n="navContact">Contact</a>
         </nav>
@@ -768,7 +746,7 @@
             <button type="button" data-lang="da" data-code="DK">Danmark · Dansk</button>
           </div>
         </div>
-        <a class="nav-cta" href="mailto:info@dktex.lv" data-i18n="navContactCta">Contact us</a>
+        <a class="nav-cta" href="mailto:office@dktex.lv" data-i18n="navContactCta">Contact us</a>
         <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -781,9 +759,9 @@
           <div>
             <div class="eyebrow" data-i18n="heroEyebrow">Sewing Production Latvia</div>
             <h1 data-i18n="heroTitle">Sewing production from Latvia</h1>
-            <p class="hero-lead" data-i18n="heroLead">DK TEX continues the long-standing European manufacturing experience and client relationships established by SIA FIRMA JATA.</p>
+            <p class="hero-lead" data-i18n="heroLead">DK TEX offers reliable sewing production from Latvia, built on long-standing European manufacturing experience and stable client relationships.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="mailto:info@dktex.lv" data-i18n="heroPrimary">Contact DK TEX</a>
+              <a class="btn btn-primary" href="mailto:office@dktex.lv" data-i18n="heroPrimary">Contact DK TEX</a>
               <a class="btn btn-secondary" href="#production" data-i18n="productionCapabilities">Production capabilities</a>
             </div>
           </div>
@@ -813,7 +791,7 @@
             <article class="trust-item">
               <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 33h18a7 7 0 0 0 0-14h-2a8 8 0 0 0-16 0H12a6 6 0 0 0 0 12h4" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M18 38h14" stroke="currentColor" stroke-width="2.4"/></svg>
               <h3 data-i18n="trust2Title">Production experience</h3>
-              <p data-i18n="trust2Text">Continuing the manufacturing experience accumulated through SIA FIRMA JATA.</p>
+              <p data-i18n="trust2Text">Manufacturing experience built up over many years of sewing production for European partners.</p>
             </article>
             <article class="trust-item">
               <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 35c5-6 9-9 16-9s11 3 16 9" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="31" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
@@ -837,24 +815,8 @@
           </div>
           <div class="copy">
             <p data-i18n="aboutP1">DK TEX is a Latvian sewing production company focused on long-term cooperation, careful production and clear communication.</p>
-            <p data-i18n="aboutP2">The company continues the production traditions and accumulated experience connected with SIA FIRMA JATA, which worked with European partners for many years.</p>
+            <p data-i18n="aboutP2">The company builds on production traditions and experience accumulated over many years of cooperation with European partners.</p>
             <p data-i18n="aboutP3">Our role is to support companies looking for a stable sewing production partner in the Baltic region and across the European market.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-white" id="jata">
-        <div class="container split">
-          <div class="quote-card">
-            <div class="quote-line"></div>
-            <h3 data-i18n="jataCardTitle">From SIA FIRMA JATA to DK TEX</h3>
-            <p data-i18n="jataCardText">Many professional relationships were built over the years through SIA FIRMA JATA. DK TEX continues this work under a new brand, with respect for previous cooperation and a clear focus on future projects.</p>
-          </div>
-          <div class="copy">
-            <div class="label" data-i18n="continuityLabel">Continuity</div>
-            <h2 style="margin-bottom:24px;" data-i18n="continuityTitle">A new brand, with respect for established relationships.</h2>
-            <p data-i18n="continuityP1">If your company previously cooperated with SIA FIRMA JATA, DK TEX is available for renewed communication, production discussions and new cooperation opportunities.</p>
-            <p data-i18n="continuityP2">Future correspondence and project discussions can continue under the DK TEX name and contact details.</p>
           </div>
         </div>
       </section>
@@ -895,7 +857,7 @@
               <p data-i18n="bandText">We work with companies that value a dependable production partner, clear communication and attention to detail.</p>
               <div class="bullet-list">
                 <div class="bullet" data-i18n="bullet1">Production discussions based on specifications and client requirements.</div>
-                <div class="bullet" data-i18n="bullet2">Suitable for renewed cooperation with former partners of SIA FIRMA JATA.</div>
+                <div class="bullet" data-i18n="bullet2">Open to new partnerships as well as renewed long-term cooperation.</div>
                 <div class="bullet" data-i18n="bullet3">Focused on European B2B communication and long-term reliability.</div>
               </div>
             </div>
@@ -925,10 +887,10 @@
           <div class="contact-panel">
             <div class="label" data-i18n="contactLabel">Contact</div>
             <h2 data-i18n="contactTitle">Let us discuss your current production needs.</h2>
-            <p data-i18n="contactLead">For former partners of SIA FIRMA JATA and new European clients, DK TEX is available for professional production-related communication.</p>
+            <p data-i18n="contactLead">DK TEX is available for professional production-related communication with new and existing European clients.</p>
             <div class="contact-details">
-              <div class="contact-row"><span data-i18n="emailLabel">E-mail</span><a href="mailto:info@dktex.lv">info@dktex.lv</a></div>
-              <div class="contact-row"><span data-i18n="phoneLabel">Phone</span><strong>+371 20 123 456</strong></div>
+              <div class="contact-row"><span data-i18n="emailLabel">E-mail</span><a href="mailto:office@dktex.lv">office@dktex.lv</a></div>
+              <div class="contact-row"><span data-i18n="phoneLabel">Phone</span><strong>+371 28870200</strong></div>
               <div class="contact-row"><span data-i18n="locationLabel">Location</span><strong data-i18n="factLocationValue">Latvia</strong></div>
               <div class="contact-row"><span data-i18n="websiteLabel">Website</span><strong>www.dktex.lv</strong></div>
             </div>
@@ -937,8 +899,7 @@
           <div class="form-card">
             <h3 data-i18n="formTitle">Before sending your request</h3>
             <p data-i18n="formText">To make communication efficient, please include product type, approximate quantity, specifications or photos, preferred timing and any relevant production details.</p>
-            <div class="form-note" data-i18n="formNote">This website is prepared as a business-card site for DK TEX. Replace the placeholder phone number, e-mail and website with confirmed company details before publishing.</div>
-            <a class="btn btn-primary mail-button" href="mailto:info@dktex.lv?subject=Production%20cooperation%20request%20-%20DK%20TEX" data-i18n="sendEmail">Send e-mail</a>
+            <a class="btn btn-primary mail-button" href="mailto:office@dktex.lv?subject=Production%20cooperation%20request%20-%20DK%20TEX" data-i18n="sendEmail">Send e-mail</a>
           </div>
         </div>
       </section>
@@ -950,10 +911,10 @@
         <div class="privacy-card">
           <div class="label" data-i18n="privacyLabel">Data protection</div>
           <h2 id="privacy-title" data-i18n="privacyTitle">Privacy Policy</h2>
-          <p class="privacy-updated" data-i18n="privacyUpdated">Last updated: 15 June 2026</p>
+          <p class="privacy-updated" data-i18n="privacyUpdated">Last updated: 31 August 2026</p>
           <p class="privacy-intro" data-i18n="privacyIntro">This policy explains how DK TEX processes personal data on this website and when communicating with potential or existing business partners. It is prepared for a business-card website operated from Latvia and follows the principles of the EU GDPR and Latvian data protection rules.</p>
           <div class="privacy-grid">
-            <article class="privacy-item"><h3 data-i18n="privacyControllerTitle">Controller</h3><p data-i18n="privacyControllerText">The data controller is Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registration No. 40203385369, legal address: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Contact: info@dktex.lv.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyControllerTitle">Controller</h3><p data-i18n="privacyControllerText">The data controller is Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registration No. 40203672225, legal address: Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvia. Contact: office@dktex.lv.</p></article>
             <article class="privacy-item"><h3 data-i18n="privacyDataTitle">Personal data we may process</h3><p data-i18n="privacyDataText">We may process your name, company, position, e-mail address, phone number, message content, project information you send to us, and basic technical data needed to operate and protect the website.</p></article>
             <article class="privacy-item"><h3 data-i18n="privacyPurposeTitle">Purposes</h3><p data-i18n="privacyPurposeText">Data is processed to respond to enquiries, discuss cooperation, prepare production communication, maintain business correspondence, operate the website and meet applicable legal obligations.</p></article>
             <article class="privacy-item"><h3 data-i18n="privacyLegalTitle">Legal basis</h3><p data-i18n="privacyLegalText">Depending on the situation, the legal basis may be pre-contractual steps, contract performance, legitimate business interests, consent, or compliance with legal obligations.</p></article>
@@ -961,7 +922,7 @@
             <article class="privacy-item"><h3 data-i18n="privacySharingTitle">Recipients</h3><p data-i18n="privacySharingText">Personal data may be shared only with service providers such as hosting or e-mail providers, professional advisers, authorities where required by law, or business partners when necessary for a cooperation discussion. We do not sell personal data.</p></article>
             <article class="privacy-item"><h3 data-i18n="privacyRetentionTitle">Retention</h3><p data-i18n="privacyRetentionText">We keep personal data only as long as needed for the relevant purpose, ongoing communication, legal requirements or the protection of legitimate interests. Business correspondence is reviewed periodically.</p></article>
             <article class="privacy-item"><h3 data-i18n="privacyRightsTitle">Your rights</h3><p data-i18n="privacyRightsText">You may request access, correction, deletion, restriction, portability, object to processing, or withdraw consent where applicable. You also have the right to complain to the Data State Inspectorate of Latvia.</p></article>
-            <article class="privacy-item"><h3 data-i18n="privacyContactTitle">Contact</h3><p data-i18n="privacyContactText">To exercise your rights or ask about data processing, contact DK TEX at info@dktex.lv.</p></article>
+            <article class="privacy-item"><h3 data-i18n="privacyContactTitle">Contact</h3><p data-i18n="privacyContactText">To exercise your rights or ask about data processing, contact DK TEX at office@dktex.lv.</p></article>
           </div>
         </div>
       </div>
@@ -969,10 +930,15 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <div><strong>DK TEX</strong> · <span data-i18n="brandTagline">Sewing Production Latvia</span></div>
-        <div data-i18n="footerContinuity">Continuing the production experience of SIA FIRMA JATA</div>
+        <div class="footer-brand"><strong>DK TEX</strong> · <span data-i18n="brandTagline">Sewing Production Latvia</span></div>
+        <div class="footer-company">
+          <div>SIA “BIKIT M” · Reģ. Nr. 40203672225</div>
+          <div>Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvija</div>
+          <div><a href="mailto:office@dktex.lv">office@dktex.lv</a> · <a href="tel:+37128870200">+371 28870200</a></div>
+        </div>
         <nav class="footer-links" aria-label="Footer links"><a href="#privacy" data-i18n="privacyFooterLink">Privacy Policy</a></nav>
       </div>
+      <div class="container footer-copy">© 2026 SIA “BIKIT M”. <span data-i18n="footerRights">All rights reserved.</span></div>
     </footer>
   </div>
 
@@ -981,28 +947,30 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "DK TEX",
+      "legalName": "Sabiedrība ar ierobežotu atbildību “BIKIT M”",
+      "identifier": "40203672225",
       "url": "https://www.dktex.lv",
-      "email": "info@dktex.lv",
-      "address": { "@type": "PostalAddress", "addressCountry": "LV" },
-      "description": "Latvian sewing production company continuing the long-standing European manufacturing experience of SIA FIRMA JATA."
+      "email": "office@dktex.lv",
+      "telephone": "+371 28870200",
+      "address": { "@type": "PostalAddress", "streetAddress": "Gaismas iela 5 - 143", "addressLocality": "Daugavpils", "postalCode": "LV-5414", "addressCountry": "LV" },
+      "description": "Latvian sewing production company with long-standing European manufacturing experience and stable client relationships."
     }
   </script>
   <script>
     const translations = {
       "en": {
             "metaTitle": "DK TEX — Sewing Production Partner from Latvia",
-            "metaDescription": "DK TEX is a Latvian sewing production company continuing the long-standing European manufacturing experience and client relationships established by SIA FIRMA JATA.",
+            "metaDescription": "DK TEX is a Latvian sewing production company with long-standing European manufacturing experience and stable client relationships.",
             "brandTagline": "Sewing Production Latvia",
             "languageLabel": "Language",
             "navAbout": "About us",
             "navProduction": "Production",
-            "navJata": "From SIA FIRMA JATA",
             "navCooperation": "Cooperation",
             "navContact": "Contact",
             "navContactCta": "Contact us",
             "heroEyebrow": "Sewing Production Latvia",
             "heroTitle": "Sewing production from Latvia",
-            "heroLead": "DK TEX continues the long-standing European manufacturing experience and client relationships established by SIA FIRMA JATA.",
+            "heroLead": "DK TEX offers reliable sewing production from Latvia, built on long-standing European manufacturing experience and stable client relationships.",
             "heroPrimary": "Contact DK TEX",
             "productionCapabilities": "Production capabilities",
             "heroCardIntro": "Reliable sewing production, clear communication and long-term cooperation for European companies.",
@@ -1015,7 +983,7 @@
             "trust1Title": "Reliable partner",
             "trust1Text": "Responsible cooperation focused on consistency, clarity and practical execution.",
             "trust2Title": "Production experience",
-            "trust2Text": "Continuing the manufacturing experience accumulated through SIA FIRMA JATA.",
+            "trust2Text": "Manufacturing experience built up over many years of sewing production for European partners.",
             "trust3Title": "European focus",
             "trust3Text": "Communication and cooperation approach suited to European B2B clients.",
             "trust4Title": "Project-based work",
@@ -1023,14 +991,8 @@
             "aboutLabel": "About DK TEX",
             "aboutTitle": "A calm, reliable production partner for European companies.",
             "aboutP1": "DK TEX is a Latvian sewing production company focused on long-term cooperation, careful production and clear communication.",
-            "aboutP2": "The company continues the production traditions and accumulated experience connected with SIA FIRMA JATA, which worked with European partners for many years.",
+            "aboutP2": "The company builds on production traditions and experience accumulated over many years of cooperation with European partners.",
             "aboutP3": "Our role is to support companies looking for a stable sewing production partner in the Baltic region and across the European market.",
-            "jataCardTitle": "From SIA FIRMA JATA to DK TEX",
-            "jataCardText": "Many professional relationships were built over the years through SIA FIRMA JATA. DK TEX continues this work under a new brand, with respect for previous cooperation and a clear focus on future projects.",
-            "continuityLabel": "Continuity",
-            "continuityTitle": "A new brand, with respect for established relationships.",
-            "continuityP1": "If your company previously cooperated with SIA FIRMA JATA, DK TEX is available for renewed communication, production discussions and new cooperation opportunities.",
-            "continuityP2": "Future correspondence and project discussions can continue under the DK TEX name and contact details.",
             "productionLabel": "Production capabilities",
             "productionTitle": "Sewing production, textile assembly and project-based manufacturing.",
             "productionLead": "DK TEX supports clients according to agreed specifications, practical requirements and current production needs.",
@@ -1045,7 +1007,7 @@
             "bandTitle": "Practical manufacturing cooperation",
             "bandText": "We work with companies that value a dependable production partner, clear communication and attention to detail.",
             "bullet1": "Production discussions based on specifications and client requirements.",
-            "bullet2": "Suitable for renewed cooperation with former partners of SIA FIRMA JATA.",
+            "bullet2": "Open to new partnerships as well as renewed long-term cooperation.",
             "bullet3": "Focused on European B2B communication and long-term reliability.",
             "cooperationLabel": "Cooperation",
             "cooperationTitle": "Clear process for renewed and new production discussions.",
@@ -1060,22 +1022,21 @@
             "step4Text": "Where there is a fit, cooperation can continue through stable communication and recurring planning.",
             "contactLabel": "Contact",
             "contactTitle": "Let us discuss your current production needs.",
-            "contactLead": "For former partners of SIA FIRMA JATA and new European clients, DK TEX is available for professional production-related communication.",
+            "contactLead": "DK TEX is available for professional production-related communication with new and existing European clients.",
             "emailLabel": "E-mail",
             "phoneLabel": "Phone",
             "locationLabel": "Location",
             "websiteLabel": "Website",
             "formTitle": "Before sending your request",
             "formText": "To make communication efficient, please include product type, approximate quantity, specifications or photos, preferred timing and any relevant production details.",
-            "formNote": "This website is prepared as a business-card site for DK TEX. Replace the placeholder phone number, e-mail and website with confirmed company details before publishing.",
             "sendEmail": "Send e-mail",
             "privacyFooterLink": "Privacy Policy",
             "privacyLabel": "Data protection",
             "privacyTitle": "Privacy Policy",
-            "privacyUpdated": "Last updated: 15 June 2026",
+            "privacyUpdated": "Last updated: 31 August 2026",
             "privacyIntro": "This policy explains how DK TEX processes personal data on this website and when communicating with potential or existing business partners. It is prepared for a business-card website operated from Latvia and follows the principles of the EU GDPR and Latvian data protection rules.",
             "privacyControllerTitle": "Controller",
-            "privacyControllerText": "The data controller is Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registration No. 40203385369, legal address: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Contact: info@dktex.lv.",
+            "privacyControllerText": "The data controller is Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registration No. 40203672225, legal address: Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvia. Contact: office@dktex.lv.",
             "privacyDataTitle": "Personal data we may process",
             "privacyDataText": "We may process your name, company, position, e-mail address, phone number, message content, project information you send to us, and basic technical data needed to operate and protect the website.",
             "privacyPurposeTitle": "Purposes",
@@ -1091,23 +1052,22 @@
             "privacyRightsTitle": "Your rights",
             "privacyRightsText": "You may request access, correction, deletion, restriction, portability, object to processing, or withdraw consent where applicable. You also have the right to complain to the Data State Inspectorate of Latvia.",
             "privacyContactTitle": "Contact",
-            "privacyContactText": "To exercise your rights or ask about data processing, contact DK TEX at info@dktex.lv.",
-            "footerContinuity": "Continuing the production experience of SIA FIRMA JATA"
+            "privacyContactText": "To exercise your rights or ask about data processing, contact DK TEX at office@dktex.lv.",
+            "footerRights": "All rights reserved."
       },
       "nb": {
             "metaTitle": "DK TEX — produksjonspartner innen søm fra Latvia",
-            "metaDescription": "DK TEX er et latvisk sømproduksjonsselskap som viderefører den langvarige europeiske produksjonserfaringen og kunderelasjonene etablert av SIA FIRMA JATA.",
+            "metaDescription": "DK TEX er et latvisk sømproduksjonsselskap med langvarig europeisk produksjonserfaring og stabile kunderelasjoner.",
             "brandTagline": "Sømproduksjon Latvia",
             "languageLabel": "Språk",
             "navAbout": "Om oss",
             "navProduction": "Produksjon",
-            "navJata": "Fra SIA FIRMA JATA",
             "navCooperation": "Samarbeid",
             "navContact": "Kontakt",
             "navContactCta": "Kontakt oss",
             "heroEyebrow": "Sømproduksjon Latvia",
             "heroTitle": "Sømproduksjon fra Latvia",
-            "heroLead": "DK TEX viderefører den langvarige europeiske produksjonserfaringen og kunderelasjonene etablert av SIA FIRMA JATA.",
+            "heroLead": "DK TEX tilbyr pålitelig sømproduksjon fra Latvia, bygget på langvarig europeisk produksjonserfaring og stabile kunderelasjoner.",
             "heroPrimary": "Kontakt DK TEX",
             "productionCapabilities": "Produksjonsmuligheter",
             "heroCardIntro": "Pålitelig sømproduksjon, tydelig kommunikasjon og langsiktig samarbeid for europeiske selskaper.",
@@ -1120,7 +1080,7 @@
             "trust1Title": "Pålitelig partner",
             "trust1Text": "Ansvarlig samarbeid med fokus på stabilitet, tydelighet og praktisk gjennomføring.",
             "trust2Title": "Produksjonserfaring",
-            "trust2Text": "Videreføring av produksjonserfaringen opparbeidet gjennom SIA FIRMA JATA.",
+            "trust2Text": "Produksjonserfaring opparbeidet gjennom mange års sømproduksjon for europeiske partnere.",
             "trust3Title": "Europeisk fokus",
             "trust3Text": "Kommunikasjon og samarbeidsform tilpasset europeiske B2B-kunder.",
             "trust4Title": "Prosjektbasert arbeid",
@@ -1128,14 +1088,8 @@
             "aboutLabel": "Om DK TEX",
             "aboutTitle": "En rolig og pålitelig produksjonspartner for europeiske selskaper.",
             "aboutP1": "DK TEX er et latvisk sømproduksjonsselskap med fokus på langsiktig samarbeid, nøyaktig produksjon og tydelig kommunikasjon.",
-            "aboutP2": "Selskapet viderefører produksjonstradisjonene og den opparbeidede erfaringen knyttet til SIA FIRMA JATA, som arbeidet med europeiske partnere i mange år.",
+            "aboutP2": "Selskapet bygger på produksjonstradisjoner og erfaring opparbeidet gjennom mange års samarbeid med europeiske partnere.",
             "aboutP3": "Vår rolle er å støtte selskaper som søker en stabil sømproduksjonspartner i Baltikum og på det europeiske markedet.",
-            "jataCardTitle": "Fra SIA FIRMA JATA til DK TEX",
-            "jataCardText": "Mange profesjonelle relasjoner ble bygget opp gjennom årene via SIA FIRMA JATA. DK TEX viderefører dette arbeidet under et nytt merke, med respekt for tidligere samarbeid og tydelig fokus på fremtidige prosjekter.",
-            "continuityLabel": "Kontinuitet",
-            "continuityTitle": "Et nytt merke, med respekt for etablerte relasjoner.",
-            "continuityP1": "Hvis deres selskap tidligere samarbeidet med SIA FIRMA JATA, er DK TEX tilgjengelig for fornyet kommunikasjon, produksjonsdialog og nye samarbeidsmuligheter.",
-            "continuityP2": "Fremtidig korrespondanse og prosjektdialog kan fortsette under DK TEX-navnet og kontaktinformasjonen.",
             "productionLabel": "Produksjonsmuligheter",
             "productionTitle": "Sømproduksjon, tekstilmontering og prosjektbasert produksjon.",
             "productionLead": "DK TEX støtter kunder i henhold til avtalte spesifikasjoner, praktiske krav og aktuelle produksjonsbehov.",
@@ -1150,7 +1104,7 @@
             "bandTitle": "Praktisk produksjonssamarbeid",
             "bandText": "Vi samarbeider med selskaper som verdsetter en pålitelig produksjonspartner, tydelig kommunikasjon og oppmerksomhet på detaljer.",
             "bullet1": "Produksjonsdialog basert på spesifikasjoner og kundens krav.",
-            "bullet2": "Egnet for fornyet samarbeid med tidligere partnere av SIA FIRMA JATA.",
+            "bullet2": "Åpen for nye partnerskap og fornyet langsiktig samarbeid.",
             "bullet3": "Fokusert på europeisk B2B-kommunikasjon og langsiktig pålitelighet.",
             "cooperationLabel": "Samarbeid",
             "cooperationTitle": "Tydelig prosess for fornyede og nye produksjonsdialoger.",
@@ -1165,22 +1119,21 @@
             "step4Text": "Der det er en god match, kan samarbeidet fortsette gjennom stabil kommunikasjon og løpende planlegging.",
             "contactLabel": "Kontakt",
             "contactTitle": "La oss diskutere deres nåværende produksjonsbehov.",
-            "contactLead": "For tidligere partnere av SIA FIRMA JATA og nye europeiske kunder er DK TEX tilgjengelig for profesjonell produksjonsrelatert kommunikasjon.",
+            "contactLead": "DK TEX er tilgjengelig for profesjonell produksjonsrelatert kommunikasjon med nye og eksisterende europeiske kunder.",
             "emailLabel": "E-post",
             "phoneLabel": "Telefon",
             "locationLabel": "Lokasjon",
             "websiteLabel": "Nettsted",
             "formTitle": "Før dere sender forespørselen",
             "formText": "For effektiv kommunikasjon, inkluder gjerne produkttype, omtrentlig mengde, spesifikasjoner eller bilder, ønsket tidspunkt og relevante produksjonsdetaljer.",
-            "formNote": "Dette nettstedet er utarbeidet som en visittkortside for DK TEX. Erstatt plassholder for telefonnummer, e-post og nettsted med bekreftede selskapsopplysninger før publisering.",
             "sendEmail": "Send e-post",
             "privacyFooterLink": "Personvernerklæring",
             "privacyLabel": "Personvern",
             "privacyTitle": "Personvernerklæring",
-            "privacyUpdated": "Sist oppdatert: 15. juni 2026",
+            "privacyUpdated": "Sist oppdatert: 31. august 2026",
             "privacyIntro": "Denne erklæringen forklarer hvordan DK TEX behandler personopplysninger på dette nettstedet og i kommunikasjon med potensielle eller eksisterende forretningspartnere. Den er utarbeidet for et visittkortnettsted drevet fra Latvia og følger prinsippene i EU GDPR og latviske regler for personvern.",
             "privacyControllerTitle": "Behandlingsansvarlig",
-            "privacyControllerText": "Behandlingsansvarlig er Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registreringsnummer 40203385369, juridisk adresse: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Kontakt: info@dktex.lv.",
+            "privacyControllerText": "Behandlingsansvarlig er Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registreringsnummer 40203672225, juridisk adresse: Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvia. Kontakt: office@dktex.lv.",
             "privacyDataTitle": "Personopplysninger vi kan behandle",
             "privacyDataText": "Vi kan behandle navn, selskap, stilling, e-postadresse, telefonnummer, meldingsinnhold, prosjektinformasjon du sender til oss, og grunnleggende tekniske data som trengs for å drive og beskytte nettstedet.",
             "privacyPurposeTitle": "Formål",
@@ -1196,23 +1149,22 @@
             "privacyRightsTitle": "Dine rettigheter",
             "privacyRightsText": "Du kan be om innsyn, retting, sletting, begrensning, dataportabilitet, protestere mot behandling eller trekke tilbake samtykke der dette gjelder. Du har også rett til å klage til Latvias datatilsyn, Data State Inspectorate.",
             "privacyContactTitle": "Kontakt",
-            "privacyContactText": "For å utøve dine rettigheter eller stille spørsmål om databehandling, kontakt DK TEX på info@dktex.lv.",
-            "footerContinuity": "Viderefører produksjonserfaringen fra SIA FIRMA JATA"
+            "privacyContactText": "For å utøve dine rettigheter eller stille spørsmål om databehandling, kontakt DK TEX på office@dktex.lv.",
+            "footerRights": "Alle rettigheter forbeholdt."
       },
       "sv": {
             "metaTitle": "DK TEX — sömnadsproduktionspartner från Lettland",
-            "metaDescription": "DK TEX är ett lettiskt sömnadsproduktionsföretag som fortsätter den långvariga europeiska produktionserfarenheten och kundrelationerna som etablerades av SIA FIRMA JATA.",
+            "metaDescription": "DK TEX är ett lettiskt sömnadsproduktionsföretag med långvarig europeisk produktionserfarenhet och stabila kundrelationer.",
             "brandTagline": "Sömnadsproduktion Lettland",
             "languageLabel": "Språk",
             "navAbout": "Om oss",
             "navProduction": "Produktion",
-            "navJata": "Från SIA FIRMA JATA",
             "navCooperation": "Samarbete",
             "navContact": "Kontakt",
             "navContactCta": "Kontakta oss",
             "heroEyebrow": "Sömnadsproduktion Lettland",
             "heroTitle": "Syproduktion från Lettland",
-            "heroLead": "DK TEX fortsätter den långvariga europeiska produktionserfarenheten och kundrelationerna som etablerades av SIA FIRMA JATA.",
+            "heroLead": "DK TEX erbjuder pålitlig sömnadsproduktion från Lettland, byggd på långvarig europeisk produktionserfarenhet och stabila kundrelationer.",
             "heroPrimary": "Kontakta DK TEX",
             "productionCapabilities": "Produktionskapacitet",
             "heroCardIntro": "Tillförlitlig sömnadsproduktion, tydlig kommunikation och långsiktigt samarbete för europeiska företag.",
@@ -1225,7 +1177,7 @@
             "trust1Title": "Tillförlitlig partner",
             "trust1Text": "Ansvarsfullt samarbete med fokus på stabilitet, tydlighet och praktiskt genomförande.",
             "trust2Title": "Produktionserfarenhet",
-            "trust2Text": "Fortsätter den tillverkningserfarenhet som byggts upp genom SIA FIRMA JATA.",
+            "trust2Text": "Tillverkningserfarenhet uppbyggd genom många års sömnadsproduktion för europeiska partner.",
             "trust3Title": "Europeiskt fokus",
             "trust3Text": "Kommunikation och samarbetsform anpassad för europeiska B2B-kunder.",
             "trust4Title": "Projektbaserat arbete",
@@ -1233,14 +1185,8 @@
             "aboutLabel": "Om DK TEX",
             "aboutTitle": "En lugn och tillförlitlig produktionspartner för europeiska företag.",
             "aboutP1": "DK TEX är ett lettiskt sömnadsproduktionsföretag med fokus på långsiktigt samarbete, noggrann produktion och tydlig kommunikation.",
-            "aboutP2": "Företaget fortsätter de produktionstraditioner och den erfarenhet som är kopplade till SIA FIRMA JATA, som arbetade med europeiska partner under många år.",
+            "aboutP2": "Företaget bygger på produktionstraditioner och erfarenhet som byggts upp under många års samarbete med europeiska partner.",
             "aboutP3": "Vår roll är att stödja företag som söker en stabil sömnadsproduktionspartner i Baltikum och på den europeiska marknaden.",
-            "jataCardTitle": "Från SIA FIRMA JATA till DK TEX",
-            "jataCardText": "Många professionella relationer byggdes upp genom åren via SIA FIRMA JATA. DK TEX fortsätter detta arbete under ett nytt varumärke, med respekt för tidigare samarbete och tydligt fokus på framtida projekt.",
-            "continuityLabel": "Kontinuitet",
-            "continuityTitle": "Ett nytt varumärke, med respekt för etablerade relationer.",
-            "continuityP1": "Om ert företag tidigare samarbetade med SIA FIRMA JATA är DK TEX tillgängligt för förnyad kommunikation, produktionsdiskussioner och nya samarbetsmöjligheter.",
-            "continuityP2": "Framtida korrespondens och projektdiskussioner kan fortsätta under DK TEX namn och kontaktuppgifter.",
             "productionLabel": "Produktionskapacitet",
             "productionTitle": "Sömnadsproduktion, textilmontering och projektbaserad tillverkning.",
             "productionLead": "DK TEX stödjer kunder enligt överenskomna specifikationer, praktiska krav och aktuella produktionsbehov.",
@@ -1255,7 +1201,7 @@
             "bandTitle": "Praktiskt tillverkningssamarbete",
             "bandText": "Vi arbetar med företag som värdesätter en pålitlig produktionspartner, tydlig kommunikation och uppmärksamhet på detaljer.",
             "bullet1": "Produktionsdiskussioner baserade på specifikationer och kundens krav.",
-            "bullet2": "Lämpligt för förnyat samarbete med tidigare partner till SIA FIRMA JATA.",
+            "bullet2": "Öppet för nya partnerskap och förnyat långsiktigt samarbete.",
             "bullet3": "Fokuserat på europeisk B2B-kommunikation och långsiktig tillförlitlighet.",
             "cooperationLabel": "Samarbete",
             "cooperationTitle": "Tydlig process för förnyade och nya produktionsdiskussioner.",
@@ -1270,22 +1216,21 @@
             "step4Text": "Där det finns en bra matchning kan samarbetet fortsätta genom stabil kommunikation och återkommande planering.",
             "contactLabel": "Kontakt",
             "contactTitle": "Låt oss diskutera era aktuella produktionsbehov.",
-            "contactLead": "För tidigare partner till SIA FIRMA JATA och nya europeiska kunder är DK TEX tillgängligt för professionell produktionsrelaterad kommunikation.",
+            "contactLead": "DK TEX är tillgängligt för professionell produktionsrelaterad kommunikation med nya och befintliga europeiska kunder.",
             "emailLabel": "E-post",
             "phoneLabel": "Telefon",
             "locationLabel": "Plats",
             "websiteLabel": "Webbplats",
             "formTitle": "Innan ni skickar er förfrågan",
             "formText": "För effektiv kommunikation, ange gärna produkttyp, ungefärlig kvantitet, specifikationer eller bilder, önskad tidplan och relevanta produktionsdetaljer.",
-            "formNote": "Denna webbplats är framtagen som en visitkortssida för DK TEX. Ersätt platshållare för telefonnummer, e-post och webbplats med bekräftade företagsuppgifter före publicering.",
             "sendEmail": "Skicka e-post",
             "privacyFooterLink": "Integritetspolicy",
             "privacyLabel": "Dataskydd",
             "privacyTitle": "Integritetspolicy",
-            "privacyUpdated": "Senast uppdaterad: 15 juni 2026",
+            "privacyUpdated": "Senast uppdaterad: 31 augusti 2026",
             "privacyIntro": "Denna policy förklarar hur DK TEX behandlar personuppgifter på denna webbplats och vid kommunikation med potentiella eller befintliga affärspartner. Den är framtagen för en visitkortswebbplats som drivs från Lettland och följer principerna i EU:s GDPR och lettiska dataskyddsregler.",
             "privacyControllerTitle": "Personuppgiftsansvarig",
-            "privacyControllerText": "Personuppgiftsansvarig är Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registreringsnummer 40203385369, juridisk adress: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Lettland. Kontakt: info@dktex.lv.",
+            "privacyControllerText": "Personuppgiftsansvarig är Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registreringsnummer 40203672225, juridisk adress: Gaismas iela 5 - 143, Daugavpils, LV-5414, Lettland. Kontakt: office@dktex.lv.",
             "privacyDataTitle": "Personuppgifter vi kan behandla",
             "privacyDataText": "Vi kan behandla ditt namn, företag, befattning, e-postadress, telefonnummer, meddelandeinnehåll, projektinformation som du skickar till oss samt grundläggande tekniska data som behövs för att driva och skydda webbplatsen.",
             "privacyPurposeTitle": "Ändamål",
@@ -1301,23 +1246,22 @@
             "privacyRightsTitle": "Dina rättigheter",
             "privacyRightsText": "Du kan begära tillgång, rättelse, radering, begränsning, dataportabilitet, invända mot behandling eller återkalla samtycke där det är tillämpligt. Du har också rätt att klaga till Lettlands dataskyddsmyndighet, Data State Inspectorate.",
             "privacyContactTitle": "Kontakt",
-            "privacyContactText": "För att utöva dina rättigheter eller ställa frågor om databehandling, kontakta DK TEX på info@dktex.lv.",
-            "footerContinuity": "Fortsätter produktionserfarenheten från SIA FIRMA JATA"
+            "privacyContactText": "För att utöva dina rättigheter eller ställa frågor om databehandling, kontakta DK TEX på office@dktex.lv.",
+            "footerRights": "Alla rättigheter förbehållna."
       },
       "fi": {
             "metaTitle": "DK TEX — ompelutuotannon kumppani Latviasta",
-            "metaDescription": "DK TEX on latvialainen ompelutuotantoyritys, joka jatkaa SIA FIRMA JATAn luomaa pitkäaikaista eurooppalaista tuotantokokemusta ja asiakassuhteita.",
+            "metaDescription": "DK TEX on latvialainen ompelutuotantoyritys, jolla on pitkäaikainen eurooppalainen tuotantokokemus ja vakaat asiakassuhteet.",
             "brandTagline": "Ompelutuotanto Latvia",
             "languageLabel": "Kieli",
             "navAbout": "Tietoa meistä",
             "navProduction": "Tuotanto",
-            "navJata": "SIA FIRMA JATAsta",
             "navCooperation": "Yhteistyö",
             "navContact": "Yhteys",
             "navContactCta": "Ota yhteyttä",
             "heroEyebrow": "Ompelutuotanto Latvia",
             "heroTitle": "Ompelutuotanto Latviasta",
-            "heroLead": "DK TEX jatkaa SIA FIRMA JATAn luomaa pitkäaikaista eurooppalaista tuotantokokemusta ja asiakassuhteita.",
+            "heroLead": "DK TEX tarjoaa luotettavaa ompelutuotantoa Latviasta. Toiminta perustuu pitkäaikaiseen eurooppalaiseen tuotantokokemukseen ja vakaisiin asiakassuhteisiin.",
             "heroPrimary": "Ota yhteyttä DK TEXiin",
             "productionCapabilities": "Tuotantomahdollisuudet",
             "heroCardIntro": "Luotettava ompelutuotanto, selkeä viestintä ja pitkäaikainen yhteistyö eurooppalaisille yrityksille.",
@@ -1330,7 +1274,7 @@
             "trust1Title": "Luotettava kumppani",
             "trust1Text": "Vastuullista yhteistyötä, jossa korostuvat johdonmukaisuus, selkeys ja käytännön toteutus.",
             "trust2Title": "Tuotantokokemus",
-            "trust2Text": "SIA FIRMA JATAn kautta kertyneen valmistuskokemuksen jatkaminen.",
+            "trust2Text": "Valmistuskokemus, joka on kertynyt monien vuosien ompelutuotannosta eurooppalaisille kumppaneille.",
             "trust3Title": "Eurooppalainen fokus",
             "trust3Text": "Viestintä- ja yhteistyötapa, joka sopii eurooppalaisille B2B-asiakkaille.",
             "trust4Title": "Projektipohjainen työ",
@@ -1338,14 +1282,8 @@
             "aboutLabel": "Tietoa DK TEXistä",
             "aboutTitle": "Rauhallinen ja luotettava tuotantokumppani eurooppalaisille yrityksille.",
             "aboutP1": "DK TEX on latvialainen ompelutuotantoyritys, joka keskittyy pitkäaikaiseen yhteistyöhön, huolelliseen tuotantoon ja selkeään viestintään.",
-            "aboutP2": "Yritys jatkaa SIA FIRMA JATAan liittyviä tuotantoperinteitä ja kertynyttä kokemusta. SIA FIRMA JATA työskenteli eurooppalaisten kumppaneiden kanssa monien vuosien ajan.",
+            "aboutP2": "Yritys rakentaa toimintansa tuotantoperinteille ja kokemukselle, joka on kertynyt monien vuosien yhteistyöstä eurooppalaisten kumppaneiden kanssa.",
             "aboutP3": "Tehtävämme on tukea yrityksiä, jotka etsivät vakaata ompelutuotannon kumppania Baltian alueelta ja Euroopan markkinoilta.",
-            "jataCardTitle": "SIA FIRMA JATAsta DK TEXiin",
-            "jataCardText": "Monet ammatilliset suhteet rakennettiin vuosien aikana SIA FIRMA JATAn kautta. DK TEX jatkaa tätä työtä uuden brändin alla, kunnioittaen aiempaa yhteistyötä ja keskittyen tuleviin projekteihin.",
-            "continuityLabel": "Jatkuvuus",
-            "continuityTitle": "Uusi brändi, joka kunnioittaa vakiintuneita suhteita.",
-            "continuityP1": "Jos yrityksenne teki aiemmin yhteistyötä SIA FIRMA JATAn kanssa, DK TEX on käytettävissä yhteyden uudistamiseen, tuotantokeskusteluihin ja uusiin yhteistyömahdollisuuksiin.",
-            "continuityP2": "Tuleva kirjeenvaihto ja projektikeskustelut voivat jatkua DK TEX -nimen ja yhteystietojen kautta.",
             "productionLabel": "Tuotantomahdollisuudet",
             "productionTitle": "Ompelutuotanto, tekstiilikokoonpano ja projektipohjainen valmistus.",
             "productionLead": "DK TEX tukee asiakkaita sovittujen erittelyjen, käytännön vaatimusten ja ajankohtaisten tuotantotarpeiden mukaan.",
@@ -1360,7 +1298,7 @@
             "bandTitle": "Käytännön valmistusyhteistyö",
             "bandText": "Teemme yhteistyötä yritysten kanssa, jotka arvostavat luotettavaa tuotantokumppania, selkeää viestintää ja huomiota yksityiskohtiin.",
             "bullet1": "Tuotantokeskustelut perustuvat erittelyihin ja asiakkaan vaatimuksiin.",
-            "bullet2": "Sopii yhteistyön uudistamiseen SIA FIRMA JATAn entisten kumppaneiden kanssa.",
+            "bullet2": "Avoin uusille kumppanuuksille ja pitkäaikaisen yhteistyön uudistamiselle.",
             "bullet3": "Keskittyy eurooppalaiseen B2B-viestintään ja pitkäaikaiseen luotettavuuteen.",
             "cooperationLabel": "Yhteistyö",
             "cooperationTitle": "Selkeä prosessi uudistettuihin ja uusiin tuotantokeskusteluihin.",
@@ -1375,22 +1313,21 @@
             "step4Text": "Kun yhteistyölle on hyvä pohja, se voi jatkua vakaalla viestinnällä ja toistuvalla suunnittelulla.",
             "contactLabel": "Yhteys",
             "contactTitle": "Keskustellaan nykyisistä tuotantotarpeistanne.",
-            "contactLead": "SIA FIRMA JATAn entisille kumppaneille ja uusille eurooppalaisille asiakkaille DK TEX on käytettävissä ammattimaiseen tuotantoon liittyvään viestintään.",
+            "contactLead": "DK TEX on käytettävissä ammattimaiseen tuotantoon liittyvään viestintään uusien ja nykyisten eurooppalaisten asiakkaiden kanssa.",
             "emailLabel": "Sähköposti",
             "phoneLabel": "Puhelin",
             "locationLabel": "Sijainti",
             "websiteLabel": "Verkkosivusto",
             "formTitle": "Ennen pyynnön lähettämistä",
             "formText": "Jotta viestintä olisi tehokasta, ilmoittakaa tuotetyyppi, arvioitu määrä, erittelyt tai kuvat, toivottu aikataulu ja muut olennaiset tuotantotiedot.",
-            "formNote": "Tämä verkkosivusto on valmisteltu DK TEXin käyntikorttisivuksi. Korvaa puhelinnumeron, sähköpostin ja verkkosivuston paikkamerkit vahvistetuilla yritystiedoilla ennen julkaisua.",
             "sendEmail": "Lähetä sähköposti",
             "privacyFooterLink": "Tietosuojakäytäntö",
             "privacyLabel": "Tietosuoja",
             "privacyTitle": "Tietosuojakäytäntö",
-            "privacyUpdated": "Päivitetty viimeksi: 15. kesäkuuta 2026",
+            "privacyUpdated": "Päivitetty viimeksi: 31. elokuuta 2026",
             "privacyIntro": "Tämä käytäntö selittää, miten DK TEX käsittelee henkilötietoja tällä verkkosivustolla ja viestiessään mahdollisten tai nykyisten liikekumppaneiden kanssa. Se on laadittu Latviasta ylläpidettävälle käyntikorttisivustolle ja noudattaa EU:n GDPR:n sekä Latvian tietosuojasääntöjen periaatteita.",
             "privacyControllerTitle": "Rekisterinpitäjä",
-            "privacyControllerText": "Rekisterinpitäjä on Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), rekisterinumero 40203385369, virallinen osoite: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvia. Yhteys: info@dktex.lv.",
+            "privacyControllerText": "Rekisterinpitäjä on Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), rekisterinumero 40203672225, virallinen osoite: Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvia. Yhteys: office@dktex.lv.",
             "privacyDataTitle": "Henkilötiedot, joita voimme käsitellä",
             "privacyDataText": "Voimme käsitellä nimeäsi, yritystäsi, asemaasi, sähköpostiosoitettasi, puhelinnumeroasi, viestisi sisältöä, meille lähettämiäsi projektitietoja sekä verkkosivuston käyttöön ja suojaamiseen tarvittavia teknisiä perustietoja.",
             "privacyPurposeTitle": "Käyttötarkoitukset",
@@ -1406,23 +1343,22 @@
             "privacyRightsTitle": "Oikeutesi",
             "privacyRightsText": "Voit pyytää pääsyä tietoihin, oikaisua, poistamista, käsittelyn rajoittamista, tietojen siirrettävyyttä, vastustaa käsittelyä tai peruuttaa suostumuksen soveltuvin osin. Sinulla on myös oikeus tehdä valitus Latvian tietosuojaviranomaiselle, Data State Inspectoratelle.",
             "privacyContactTitle": "Yhteys",
-            "privacyContactText": "Käyttääksesi oikeuksiasi tai kysyäksesi tietojen käsittelystä, ota yhteyttä DK TEXiin osoitteessa info@dktex.lv.",
-            "footerContinuity": "Jatkaa SIA FIRMA JATAn tuotantokokemusta"
+            "privacyContactText": "Käyttääksesi oikeuksiasi tai kysyäksesi tietojen käsittelystä, ota yhteyttä DK TEXiin osoitteessa office@dktex.lv.",
+            "footerRights": "Kaikki oikeudet pidätetään."
       },
       "et": {
             "metaTitle": "DK TEX — õmblustootmise partner Lätist",
-            "metaDescription": "DK TEX on Läti õmblustootmise ettevõte, mis jätkab SIA FIRMA JATA loodud pikaajalist Euroopa tootmiskogemust ja kliendisuhteid.",
+            "metaDescription": "DK TEX on Läti õmblustootmise ettevõte, millel on pikaajaline Euroopa tootmiskogemus ja stabiilsed kliendisuhted.",
             "brandTagline": "Õmblustootmine Lätis",
             "languageLabel": "Keel",
             "navAbout": "Meist",
             "navProduction": "Tootmine",
-            "navJata": "SIA FIRMA JATAst",
             "navCooperation": "Koostöö",
             "navContact": "Kontakt",
             "navContactCta": "Võtke ühendust",
             "heroEyebrow": "Õmblustootmine Lätis",
             "heroTitle": "Õmblustootmine Lätist",
-            "heroLead": "DK TEX jätkab SIA FIRMA JATA loodud pikaajalist Euroopa tootmiskogemust ja kliendisuhteid.",
+            "heroLead": "DK TEX pakub usaldusväärset õmblustootmist Lätist, mis põhineb pikaajalisel Euroopa tootmiskogemusel ja stabiilsetel kliendisuhetel.",
             "heroPrimary": "Võtke ühendust DK TEXiga",
             "productionCapabilities": "Tootmisvõimalused",
             "heroCardIntro": "Usaldusväärne õmblustootmine, selge suhtlus ja pikaajaline koostöö Euroopa ettevõtetele.",
@@ -1435,7 +1371,7 @@
             "trust1Title": "Usaldusväärne partner",
             "trust1Text": "Vastutustundlik koostöö, mis keskendub järjepidevusele, selgusele ja praktilisele teostusele.",
             "trust2Title": "Tootmiskogemus",
-            "trust2Text": "SIA FIRMA JATA kaudu kogunenud tootmiskogemuse jätkamine.",
+            "trust2Text": "Tootmiskogemus, mis on kogunenud paljude aastate õmblustootmisest Euroopa partneritele.",
             "trust3Title": "Euroopa fookus",
             "trust3Text": "Suhtlus- ja koostööviis, mis sobib Euroopa B2B klientidele.",
             "trust4Title": "Projektipõhine töö",
@@ -1443,14 +1379,8 @@
             "aboutLabel": "DK TEXist",
             "aboutTitle": "Rahulik ja usaldusväärne tootmispartner Euroopa ettevõtetele.",
             "aboutP1": "DK TEX on Läti õmblustootmise ettevõte, mis keskendub pikaajalisele koostööle, hoolikale tootmisele ja selgele suhtlusele.",
-            "aboutP2": "Ettevõte jätkab tootmistraditsioone ja kogunenud kogemust, mis on seotud SIA FIRMA JATAga, kes töötas aastaid Euroopa partneritega.",
+            "aboutP2": "Ettevõte toetub tootmistraditsioonidele ja kogemusele, mis on kogunenud paljude aastate koostööst Euroopa partneritega.",
             "aboutP3": "Meie roll on toetada ettevõtteid, kes otsivad stabiilset õmblustootmise partnerit Balti regioonis ja Euroopa turul.",
-            "jataCardTitle": "SIA FIRMA JATAst DK TEXini",
-            "jataCardText": "Paljud professionaalsed suhted loodi aastate jooksul SIA FIRMA JATA kaudu. DK TEX jätkab seda tööd uue kaubamärgi all, austades varasemat koostööd ja keskendudes tulevastele projektidele.",
-            "continuityLabel": "Järjepidevus",
-            "continuityTitle": "Uus kaubamärk, mis austab väljakujunenud suhteid.",
-            "continuityP1": "Kui teie ettevõte tegi varem koostööd SIA FIRMA JATAga, on DK TEX valmis taastama suhtluse, arutama tootmist ja uusi koostöövõimalusi.",
-            "continuityP2": "Edasine kirjavahetus ja projektide arutelu võivad jätkuda DK TEX nime ja kontaktandmete kaudu.",
             "productionLabel": "Tootmisvõimalused",
             "productionTitle": "Õmblustootmine, tekstiilide koostamine ja projektipõhine tootmine.",
             "productionLead": "DK TEX toetab kliente vastavalt kokkulepitud spetsifikatsioonidele, praktilistele nõuetele ja praegustele tootmisvajadustele.",
@@ -1465,7 +1395,7 @@
             "bandTitle": "Praktiline tootmiskoostöö",
             "bandText": "Teeme koostööd ettevõtetega, kes hindavad usaldusväärset tootmispartnerit, selget suhtlust ja tähelepanu detailidele.",
             "bullet1": "Tootmisarutelud põhinevad spetsifikatsioonidel ja kliendi nõuetel.",
-            "bullet2": "Sobib koostöö taastamiseks SIA FIRMA JATA endiste partneritega.",
+            "bullet2": "Avatud uutele partnerlustele ja pikaajalise koostöö taastamisele.",
             "bullet3": "Keskendub Euroopa B2B suhtlusele ja pikaajalisele usaldusväärsusele.",
             "cooperationLabel": "Koostöö",
             "cooperationTitle": "Selge protsess taastatud ja uute tootmisarutelude jaoks.",
@@ -1480,22 +1410,21 @@
             "step4Text": "Kui koostöö sobib, saab see jätkuda stabiilse suhtluse ja korduva planeerimise kaudu.",
             "contactLabel": "Kontakt",
             "contactTitle": "Arutame teie praeguseid tootmisvajadusi.",
-            "contactLead": "SIA FIRMA JATA endistele partneritele ja uutele Euroopa klientidele on DK TEX valmis professionaalseks tootmisega seotud suhtluseks.",
+            "contactLead": "DK TEX on valmis professionaalseks tootmisega seotud suhtluseks uute ja olemasolevate Euroopa klientidega.",
             "emailLabel": "E-post",
             "phoneLabel": "Telefon",
             "locationLabel": "Asukoht",
             "websiteLabel": "Veebisait",
             "formTitle": "Enne päringu saatmist",
             "formText": "Tõhusa suhtluse jaoks lisage palun toote tüüp, ligikaudne kogus, spetsifikatsioonid või fotod, soovitud ajakava ja muud asjakohased tootmisdetailid.",
-            "formNote": "See veebisait on koostatud DK TEXi visiitkaardilehena. Enne avaldamist asendage telefoni, e-posti ja veebisaidi kohatäited kinnitatud ettevõtteandmetega.",
             "sendEmail": "Saada e-kiri",
             "privacyFooterLink": "Privaatsuspoliitika",
             "privacyLabel": "Andmekaitse",
             "privacyTitle": "Privaatsuspoliitika",
-            "privacyUpdated": "Viimati uuendatud: 15. juuni 2026",
+            "privacyUpdated": "Viimati uuendatud: 31. august 2026",
             "privacyIntro": "See poliitika selgitab, kuidas DK TEX töötleb isikuandmeid sellel veebilehel ning suhtluses võimalike või olemasolevate äripartneritega. See on koostatud Lätist hallatava visiitkaardilehe jaoks ning järgib EL-i GDPR-i ja Läti andmekaitsereeglite põhimõtteid.",
             "privacyControllerTitle": "Vastutav töötleja",
-            "privacyControllerText": "Vastutav töötleja on Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registrikood 40203385369, juriidiline aadress: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Läti. Kontakt: info@dktex.lv.",
+            "privacyControllerText": "Vastutav töötleja on Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registrikood 40203672225, juriidiline aadress: Gaismas iela 5 - 143, Daugavpils, LV-5414, Läti. Kontakt: office@dktex.lv.",
             "privacyDataTitle": "Isikuandmed, mida võime töödelda",
             "privacyDataText": "Võime töödelda teie nime, ettevõtet, ametikohta, e-posti aadressi, telefoninumbrit, sõnumi sisu, meile saadetud projektiteavet ning veebilehe toimimiseks ja kaitsmiseks vajalikke tehnilisi põhiandmeid.",
             "privacyPurposeTitle": "Eesmärgid",
@@ -1511,23 +1440,22 @@
             "privacyRightsTitle": "Teie õigused",
             "privacyRightsText": "Teil on õigus taotleda juurdepääsu, parandamist, kustutamist, piiramist, andmete ülekandmist, esitada vastuväiteid töötlemisele või võtta nõusolek tagasi, kui see on kohaldatav. Teil on ka õigus esitada kaebus Läti andmekaitseasutusele, Data State Inspectorate.",
             "privacyContactTitle": "Kontakt",
-            "privacyContactText": "Oma õiguste kasutamiseks või andmetöötluse kohta küsimiseks võtke ühendust DK TEXiga aadressil info@dktex.lv.",
-            "footerContinuity": "Jätkame SIA FIRMA JATA tootmiskogemust"
+            "privacyContactText": "Oma õiguste kasutamiseks või andmetöötluse kohta küsimiseks võtke ühendust DK TEXiga aadressil office@dktex.lv.",
+            "footerRights": "Kõik õigused kaitstud."
       },
       "lv": {
             "metaTitle": "DK TEX — šūšanas ražošanas partneris no Latvijas",
-            "metaDescription": "DK TEX ir Latvijas šūšanas ražošanas uzņēmums, kas turpina SIA FIRMA JATA izveidoto ilgtermiņa Eiropas ražošanas pieredzi un klientu attiecības.",
+            "metaDescription": "DK TEX ir Latvijas šūšanas ražošanas uzņēmums ar ilggadēju Eiropas ražošanas pieredzi un stabilām klientu attiecībām.",
             "brandTagline": "Šūšanas ražošana Latvijā",
             "languageLabel": "Valoda",
             "navAbout": "Par mums",
             "navProduction": "Ražošana",
-            "navJata": "No SIA FIRMA JATA",
             "navCooperation": "Sadarbība",
             "navContact": "Kontakti",
             "navContactCta": "Sazināties",
             "heroEyebrow": "Šūšanas ražošana Latvijā",
             "heroTitle": "Šūšanas ražošana Latvijā",
-            "heroLead": "DK TEX turpina SIA FIRMA JATA izveidoto ilgtermiņa Eiropas ražošanas pieredzi un klientu attiecības.",
+            "heroLead": "DK TEX piedāvā uzticamu šūšanas ražošanu no Latvijas, kas balstīta ilggadējā Eiropas ražošanas pieredzē un stabilās klientu attiecībās.",
             "heroPrimary": "Sazināties ar DK TEX",
             "productionCapabilities": "Ražošanas iespējas",
             "heroCardIntro": "Uzticama šūšanas ražošana, skaidra komunikācija un ilgtermiņa sadarbība Eiropas uzņēmumiem.",
@@ -1540,7 +1468,7 @@
             "trust1Title": "Uzticams partneris",
             "trust1Text": "Atbildīga sadarbība, kas vērsta uz konsekvenci, skaidrību un praktisku izpildi.",
             "trust2Title": "Ražošanas pieredze",
-            "trust2Text": "Turpinām ražošanas pieredzi, kas uzkrāta caur SIA FIRMA JATA.",
+            "trust2Text": "Ražošanas pieredze, kas uzkrāta daudzu gadu šūšanas ražošanā Eiropas partneriem.",
             "trust3Title": "Eiropas fokuss",
             "trust3Text": "Komunikācijas un sadarbības pieeja, kas piemērota Eiropas B2B klientiem.",
             "trust4Title": "Projektu darbs",
@@ -1548,14 +1476,8 @@
             "aboutLabel": "Par DK TEX",
             "aboutTitle": "Mierīgs un uzticams ražošanas partneris Eiropas uzņēmumiem.",
             "aboutP1": "DK TEX ir Latvijas šūšanas ražošanas uzņēmums, kas koncentrējas uz ilgtermiņa sadarbību, rūpīgu ražošanu un skaidru komunikāciju.",
-            "aboutP2": "Uzņēmums turpina ražošanas tradīcijas un uzkrāto pieredzi, kas saistīta ar SIA FIRMA JATA, kura daudzus gadus strādāja ar Eiropas partneriem.",
+            "aboutP2": "Uzņēmums balstās uz ražošanas tradīcijām un pieredzi, kas uzkrāta daudzu gadu sadarbībā ar Eiropas partneriem.",
             "aboutP3": "Mūsu uzdevums ir atbalstīt uzņēmumus, kuri meklē stabilu šūšanas ražošanas partneri Baltijas reģionā un Eiropas tirgū.",
-            "jataCardTitle": "No SIA FIRMA JATA uz DK TEX",
-            "jataCardText": "Daudzas profesionālās attiecības gadu gaitā tika veidotas caur SIA FIRMA JATA. DK TEX turpina šo darbu ar jaunu zīmolu, cienot iepriekšējo sadarbību un koncentrējoties uz nākotnes projektiem.",
-            "continuityLabel": "Pēctecība",
-            "continuityTitle": "Jauns zīmols ar cieņu pret izveidotajām attiecībām.",
-            "continuityP1": "Ja jūsu uzņēmums iepriekš sadarbojās ar SIA FIRMA JATA, DK TEX ir pieejams atjaunotai komunikācijai, ražošanas sarunām un jaunām sadarbības iespējām.",
-            "continuityP2": "Turpmākā sarakste un projektu apspriešana var turpināties ar DK TEX nosaukumu un kontaktinformāciju.",
             "productionLabel": "Ražošanas iespējas",
             "productionTitle": "Šūšanas ražošana, tekstila komplektēšana un projektu ražošana.",
             "productionLead": "DK TEX atbalsta klientus saskaņā ar saskaņotām specifikācijām, praktiskām prasībām un aktuālajām ražošanas vajadzībām.",
@@ -1570,7 +1492,7 @@
             "bandTitle": "Praktiska ražošanas sadarbība",
             "bandText": "Mēs strādājam ar uzņēmumiem, kas novērtē uzticamu ražošanas partneri, skaidru komunikāciju un uzmanību detaļām.",
             "bullet1": "Ražošanas sarunas, kas balstītas uz specifikācijām un klienta prasībām.",
-            "bullet2": "Piemērots sadarbības atjaunošanai ar bijušajiem SIA FIRMA JATA partneriem.",
+            "bullet2": "Atvērts jaunām partnerībām un ilgtermiņa sadarbības atjaunošanai.",
             "bullet3": "Fokuss uz Eiropas B2B komunikāciju un ilgtermiņa uzticamību.",
             "cooperationLabel": "Sadarbība",
             "cooperationTitle": "Skaidrs process atjaunotām un jaunām ražošanas sarunām.",
@@ -1585,22 +1507,21 @@
             "step4Text": "Ja ir piemērota sadarbība, tā var turpināties ar stabilu komunikāciju un atkārtotu plānošanu.",
             "contactLabel": "Kontakti",
             "contactTitle": "Apspriedīsim jūsu pašreizējās ražošanas vajadzības.",
-            "contactLead": "Bijušajiem SIA FIRMA JATA partneriem un jaunajiem Eiropas klientiem DK TEX ir pieejams profesionālai ar ražošanu saistītai komunikācijai.",
+            "contactLead": "DK TEX ir pieejams profesionālai ar ražošanu saistītai komunikācijai ar jauniem un esošajiem Eiropas klientiem.",
             "emailLabel": "E-pasts",
             "phoneLabel": "Tālrunis",
             "locationLabel": "Atrašanās vieta",
             "websiteLabel": "Mājaslapa",
             "formTitle": "Pirms pieprasījuma nosūtīšanas",
             "formText": "Lai komunikācija būtu efektīva, lūdzu, norādiet produkta veidu, aptuveno daudzumu, specifikācijas vai fotoattēlus, vēlamo termiņu un citu būtisku ražošanas informāciju.",
-            "formNote": "Šī mājaslapa ir sagatavota kā DK TEX vizītkartes vietne. Pirms publicēšanas aizstājiet tālruņa, e-pasta un mājaslapas vietturus ar apstiprinātiem uzņēmuma datiem.",
             "sendEmail": "Sūtīt e-pastu",
             "privacyFooterLink": "Privātuma politika",
             "privacyLabel": "Datu aizsardzība",
             "privacyTitle": "Privātuma politika",
-            "privacyUpdated": "Pēdējoreiz atjaunināts: 2026. gada 15. jūnijā",
+            "privacyUpdated": "Pēdējoreiz atjaunināts: 2026. gada 31. augustā",
             "privacyIntro": "Šī politika skaidro, kā DK TEX apstrādā personas datus šajā tīmekļvietnē un saziņā ar potenciālajiem vai esošajiem sadarbības partneriem. Tā ir sagatavota vizītkartes tipa tīmekļvietnei, kas tiek uzturēta Latvijā, ievērojot ES VDAR un Latvijas datu aizsardzības noteikumu principus.",
             "privacyControllerTitle": "Pārzinis",
-            "privacyControllerText": "Pārzinis ir Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), reģistrācijas Nr. 40203385369, juridiskā adrese: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvija. Kontaktinformācija: info@dktex.lv.",
+            "privacyControllerText": "Pārzinis ir Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), reģistrācijas Nr. 40203672225, juridiskā adrese: Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvija. Kontaktinformācija: office@dktex.lv.",
             "privacyDataTitle": "Personas dati, kurus varam apstrādāt",
             "privacyDataText": "Mēs varam apstrādāt jūsu vārdu, uzņēmumu, amatu, e-pasta adresi, tālruņa numuru, ziņojuma saturu, projekta informāciju, ko nosūtāt mums, kā arī pamata tehniskos datus, kas nepieciešami tīmekļvietnes darbībai un aizsardzībai.",
             "privacyPurposeTitle": "Nolūki",
@@ -1616,23 +1537,22 @@
             "privacyRightsTitle": "Jūsu tiesības",
             "privacyRightsText": "Jūs varat pieprasīt piekļuvi, labošanu, dzēšanu, apstrādes ierobežošanu, datu pārnesamību, iebilst pret apstrādi vai atsaukt piekrišanu, ja tas ir piemērojams. Jums ir arī tiesības iesniegt sūdzību Latvijas Datu valsts inspekcijai.",
             "privacyContactTitle": "Kontaktinformācija",
-            "privacyContactText": "Lai izmantotu savas tiesības vai uzdotu jautājumus par datu apstrādi, sazinieties ar DK TEX: info@dktex.lv.",
-            "footerContinuity": "Turpinām SIA FIRMA JATA ražošanas pieredzi"
+            "privacyContactText": "Lai izmantotu savas tiesības vai uzdotu jautājumus par datu apstrādi, sazinieties ar DK TEX: office@dktex.lv.",
+            "footerRights": "Visas tiesības aizsargātas."
       },
       "lt": {
             "metaTitle": "DK TEX — siuvimo gamybos partneris iš Latvijos",
-            "metaDescription": "DK TEX yra Latvijos siuvimo gamybos įmonė, tęsianti ilgalaikę Europos gamybos patirtį ir klientų ryšius, sukurtus SIA FIRMA JATA.",
+            "metaDescription": "DK TEX yra Latvijos siuvimo gamybos įmonė, turinti ilgametę Europos gamybos patirtį ir stabilius klientų ryšius.",
             "brandTagline": "Siuvimo gamyba Latvijoje",
             "languageLabel": "Kalba",
             "navAbout": "Apie mus",
             "navProduction": "Gamyba",
-            "navJata": "Iš SIA FIRMA JATA",
             "navCooperation": "Bendradarbiavimas",
             "navContact": "Kontaktai",
             "navContactCta": "Susisiekite",
             "heroEyebrow": "Siuvimo gamyba Latvijoje",
             "heroTitle": "Siuvimo gamyba Latvijoje",
-            "heroLead": "DK TEX tęsia ilgalaikę Europos gamybos patirtį ir klientų ryšius, sukurtus SIA FIRMA JATA.",
+            "heroLead": "DK TEX siūlo patikimą siuvimo gamybą iš Latvijos, paremtą ilgamete Europos gamybos patirtimi ir stabiliais klientų ryšiais.",
             "heroPrimary": "Susisiekti su DK TEX",
             "productionCapabilities": "Gamybos galimybės",
             "heroCardIntro": "Patikima siuvimo gamyba, aiški komunikacija ir ilgalaikis bendradarbiavimas Europos įmonėms.",
@@ -1645,7 +1565,7 @@
             "trust1Title": "Patikimas partneris",
             "trust1Text": "Atsakingas bendradarbiavimas, orientuotas į nuoseklumą, aiškumą ir praktinį įgyvendinimą.",
             "trust2Title": "Gamybos patirtis",
-            "trust2Text": "Tęsiame gamybos patirtį, sukauptą per SIA FIRMA JATA.",
+            "trust2Text": "Gamybos patirtis, sukaupta per daugelį metų vykdant siuvimo gamybą Europos partneriams.",
             "trust3Title": "Europos kryptis",
             "trust3Text": "Komunikacijos ir bendradarbiavimo požiūris, tinkamas Europos B2B klientams.",
             "trust4Title": "Projektinis darbas",
@@ -1653,14 +1573,8 @@
             "aboutLabel": "Apie DK TEX",
             "aboutTitle": "Ramus ir patikimas gamybos partneris Europos įmonėms.",
             "aboutP1": "DK TEX yra Latvijos siuvimo gamybos įmonė, orientuota į ilgalaikį bendradarbiavimą, kruopščią gamybą ir aiškią komunikaciją.",
-            "aboutP2": "Įmonė tęsia gamybos tradicijas ir sukauptą patirtį, susijusią su SIA FIRMA JATA, kuri daugelį metų dirbo su Europos partneriais.",
+            "aboutP2": "Įmonė remiasi gamybos tradicijomis ir patirtimi, sukaupta per daugelį metų bendradarbiaujant su Europos partneriais.",
             "aboutP3": "Mūsų vaidmuo – padėti įmonėms, ieškančioms stabilaus siuvimo gamybos partnerio Baltijos regione ir Europos rinkoje.",
-            "jataCardTitle": "Iš SIA FIRMA JATA į DK TEX",
-            "jataCardText": "Daug profesinių ryšių per daugelį metų buvo sukurta per SIA FIRMA JATA. DK TEX tęsia šį darbą su nauju prekės ženklu, gerbdama ankstesnį bendradarbiavimą ir aiškiai orientuodamasi į būsimus projektus.",
-            "continuityLabel": "Tęstinumas",
-            "continuityTitle": "Naujas prekės ženklas, gerbiantis susiformavusius ryšius.",
-            "continuityP1": "Jei jūsų įmonė anksčiau bendradarbiavo su SIA FIRMA JATA, DK TEX yra pasirengusi atnaujinti komunikaciją, aptarti gamybą ir naujas bendradarbiavimo galimybes.",
-            "continuityP2": "Tolimesnis susirašinėjimas ir projektų aptarimai gali vykti DK TEX vardu ir kontaktais.",
             "productionLabel": "Gamybos galimybės",
             "productionTitle": "Siuvimo gamyba, tekstilės surinkimas ir projektinė gamyba.",
             "productionLead": "DK TEX padeda klientams pagal suderintas specifikacijas, praktinius reikalavimus ir esamus gamybos poreikius.",
@@ -1675,7 +1589,7 @@
             "bandTitle": "Praktinis gamybinis bendradarbiavimas",
             "bandText": "Dirbame su įmonėmis, kurios vertina patikimą gamybos partnerį, aiškią komunikaciją ir dėmesį detalėms.",
             "bullet1": "Gamybos aptarimai pagal specifikacijas ir kliento reikalavimus.",
-            "bullet2": "Tinka bendradarbiavimo atnaujinimui su buvusiais SIA FIRMA JATA partneriais.",
+            "bullet2": "Atvira naujoms partnerystėms ir ilgalaikio bendradarbiavimo atnaujinimui.",
             "bullet3": "Orientuota į Europos B2B komunikaciją ir ilgalaikį patikimumą.",
             "cooperationLabel": "Bendradarbiavimas",
             "cooperationTitle": "Aiškus procesas atnaujintiems ir naujiems gamybos aptarimams.",
@@ -1690,22 +1604,21 @@
             "step4Text": "Esant tinkamam pagrindui, bendradarbiavimas gali tęstis per stabilią komunikaciją ir pasikartojantį planavimą.",
             "contactLabel": "Kontaktai",
             "contactTitle": "Aptarkime jūsų dabartinius gamybos poreikius.",
-            "contactLead": "Buvusiems SIA FIRMA JATA partneriams ir naujiems Europos klientams DK TEX yra pasirengusi profesionaliai komunikacijai gamybos klausimais.",
+            "contactLead": "DK TEX yra pasirengusi profesionaliai komunikacijai gamybos klausimais su naujais ir esamais Europos klientais.",
             "emailLabel": "El. paštas",
             "phoneLabel": "Telefonas",
             "locationLabel": "Vieta",
             "websiteLabel": "Svetainė",
             "formTitle": "Prieš siųsdami užklausą",
             "formText": "Kad komunikacija būtų efektyvi, nurodykite gaminio tipą, apytikslį kiekį, specifikacijas ar nuotraukas, pageidaujamą terminą ir kitas svarbias gamybos detales.",
-            "formNote": "Ši svetainė parengta kaip DK TEX vizitinė svetainė. Prieš publikuodami pakeiskite telefono numerio, el. pašto ir svetainės vietaženklius patvirtintais įmonės duomenimis.",
             "sendEmail": "Siųsti el. laišką",
             "privacyFooterLink": "Privatumo politika",
             "privacyLabel": "Duomenų apsauga",
             "privacyTitle": "Privatumo politika",
-            "privacyUpdated": "Paskutinį kartą atnaujinta: 2026 m. birželio 15 d.",
+            "privacyUpdated": "Paskutinį kartą atnaujinta: 2026 m. rugpjūčio 31 d.",
             "privacyIntro": "Šioje politikoje paaiškinama, kaip DK TEX tvarko asmens duomenis šioje svetainėje ir bendraudama su potencialiais ar esamais verslo partneriais. Ji parengta vizitinės kortelės tipo svetainei, valdomai iš Latvijos, ir vadovaujasi ES GDPR bei Latvijos duomenų apsaugos taisyklių principais.",
             "privacyControllerTitle": "Duomenų valdytojas",
-            "privacyControllerText": "Duomenų valdytojas yra Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registracijos Nr. 40203385369, juridinis adresas: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Latvija. Kontaktas: info@dktex.lv.",
+            "privacyControllerText": "Duomenų valdytojas yra Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registracijos Nr. 40203672225, juridinis adresas: Gaismas iela 5 - 143, Daugavpils, LV-5414, Latvija. Kontaktas: office@dktex.lv.",
             "privacyDataTitle": "Asmens duomenys, kuriuos galime tvarkyti",
             "privacyDataText": "Galime tvarkyti jūsų vardą, įmonę, pareigas, el. pašto adresą, telefono numerį, pranešimo turinį, mums siunčiamą projekto informaciją ir pagrindinius techninius duomenis, reikalingus svetainei veikti ir apsaugoti.",
             "privacyPurposeTitle": "Tikslai",
@@ -1721,23 +1634,22 @@
             "privacyRightsTitle": "Jūsų teisės",
             "privacyRightsText": "Galite prašyti susipažinti su duomenimis, juos ištaisyti, ištrinti, apriboti tvarkymą, perkelti duomenis, nesutikti su tvarkymu arba atšaukti sutikimą, kai tai taikoma. Taip pat turite teisę pateikti skundą Latvijos duomenų valstybinei inspekcijai.",
             "privacyContactTitle": "Kontaktas",
-            "privacyContactText": "Norėdami pasinaudoti savo teisėmis arba paklausti apie duomenų tvarkymą, susisiekite su DK TEX adresu info@dktex.lv.",
-            "footerContinuity": "Tęsiame SIA FIRMA JATA gamybos patirtį"
+            "privacyContactText": "Norėdami pasinaudoti savo teisėmis arba paklausti apie duomenų tvarkymą, susisiekite su DK TEX adresu office@dktex.lv.",
+            "footerRights": "Visos teisės saugomos."
       },
       "de": {
             "metaTitle": "DK TEX — Nähproduktionspartner aus Lettland",
-            "metaDescription": "DK TEX ist ein lettisches Unternehmen für Nähproduktion, das die langjährige europäische Produktionserfahrung und Kundenbeziehungen von SIA FIRMA JATA fortführt.",
+            "metaDescription": "DK TEX ist ein lettisches Unternehmen für Nähproduktion mit langjähriger europäischer Produktionserfahrung und stabilen Kundenbeziehungen.",
             "brandTagline": "Nähproduktion Lettland",
             "languageLabel": "Sprache",
             "navAbout": "Über uns",
             "navProduction": "Produktion",
-            "navJata": "Von SIA FIRMA JATA",
             "navCooperation": "Zusammenarbeit",
             "navContact": "Kontakt",
             "navContactCta": "Kontakt aufnehmen",
             "heroEyebrow": "Nähproduktion Lettland",
             "heroTitle": "Nähproduktion aus Lettland",
-            "heroLead": "DK TEX führt die langjährige europäische Produktionserfahrung und die Kundenbeziehungen fort, die durch SIA FIRMA JATA aufgebaut wurden.",
+            "heroLead": "DK TEX bietet zuverlässige Nähproduktion aus Lettland, aufgebaut auf langjähriger europäischer Produktionserfahrung und stabilen Kundenbeziehungen.",
             "heroPrimary": "DK TEX kontaktieren",
             "productionCapabilities": "Produktionsmöglichkeiten",
             "heroCardIntro": "Zuverlässige Nähproduktion, klare Kommunikation und langfristige Zusammenarbeit für europäische Unternehmen.",
@@ -1750,7 +1662,7 @@
             "trust1Title": "Zuverlässiger Partner",
             "trust1Text": "Verantwortungsvolle Zusammenarbeit mit Fokus auf Beständigkeit, Klarheit und praktische Umsetzung.",
             "trust2Title": "Produktionserfahrung",
-            "trust2Text": "Fortführung der Fertigungserfahrung, die durch SIA FIRMA JATA aufgebaut wurde.",
+            "trust2Text": "Fertigungserfahrung, aufgebaut durch viele Jahre Nähproduktion für europäische Partner.",
             "trust3Title": "Europäischer Fokus",
             "trust3Text": "Kommunikation und Zusammenarbeit, abgestimmt auf europäische B2B-Kunden.",
             "trust4Title": "Projektbezogene Arbeit",
@@ -1758,14 +1670,8 @@
             "aboutLabel": "Über DK TEX",
             "aboutTitle": "Ein ruhiger und zuverlässiger Produktionspartner für europäische Unternehmen.",
             "aboutP1": "DK TEX ist ein lettisches Unternehmen für Nähproduktion mit Fokus auf langfristige Zusammenarbeit, sorgfältige Produktion und klare Kommunikation.",
-            "aboutP2": "Das Unternehmen führt die Produktionstraditionen und die gesammelte Erfahrung im Zusammenhang mit SIA FIRMA JATA fort, die viele Jahre mit europäischen Partnern gearbeitet hat.",
+            "aboutP2": "Das Unternehmen stützt sich auf Produktionstraditionen und Erfahrung, die in vielen Jahren der Zusammenarbeit mit europäischen Partnern gesammelt wurden.",
             "aboutP3": "Unsere Aufgabe ist es, Unternehmen zu unterstützen, die einen stabilen Nähproduktionspartner im Baltikum und auf dem europäischen Markt suchen.",
-            "jataCardTitle": "Von SIA FIRMA JATA zu DK TEX",
-            "jataCardText": "Viele professionelle Beziehungen wurden über die Jahre durch SIA FIRMA JATA aufgebaut. DK TEX führt diese Arbeit unter einer neuen Marke fort, mit Respekt für frühere Zusammenarbeit und klarem Fokus auf zukünftige Projekte.",
-            "continuityLabel": "Kontinuität",
-            "continuityTitle": "Eine neue Marke, mit Respekt für etablierte Beziehungen.",
-            "continuityP1": "Wenn Ihr Unternehmen früher mit SIA FIRMA JATA zusammengearbeitet hat, steht DK TEX für erneute Kommunikation, Produktionsgespräche und neue Kooperationsmöglichkeiten zur Verfügung.",
-            "continuityP2": "Künftige Korrespondenz und Projektgespräche können unter dem Namen und den Kontaktdaten von DK TEX fortgesetzt werden.",
             "productionLabel": "Produktionsmöglichkeiten",
             "productionTitle": "Nähproduktion, Textilmontage und projektbezogene Fertigung.",
             "productionLead": "DK TEX unterstützt Kunden gemäß vereinbarten Spezifikationen, praktischen Anforderungen und aktuellen Produktionsbedürfnissen.",
@@ -1780,7 +1686,7 @@
             "bandTitle": "Praktische Fertigungszusammenarbeit",
             "bandText": "Wir arbeiten mit Unternehmen zusammen, die einen verlässlichen Produktionspartner, klare Kommunikation und Aufmerksamkeit für Details schätzen.",
             "bullet1": "Produktionsgespräche auf Basis von Spezifikationen und Kundenanforderungen.",
-            "bullet2": "Geeignet für die Wiederaufnahme der Zusammenarbeit mit früheren Partnern von SIA FIRMA JATA.",
+            "bullet2": "Offen für neue Partnerschaften und die Wiederaufnahme langfristiger Zusammenarbeit.",
             "bullet3": "Ausgerichtet auf europäische B2B-Kommunikation und langfristige Zuverlässigkeit.",
             "cooperationLabel": "Zusammenarbeit",
             "cooperationTitle": "Klarer Prozess für erneute und neue Produktionsgespräche.",
@@ -1795,22 +1701,21 @@
             "step4Text": "Wenn die Zusammenarbeit passt, kann sie durch stabile Kommunikation und wiederkehrende Planung fortgesetzt werden.",
             "contactLabel": "Kontakt",
             "contactTitle": "Lassen Sie uns Ihre aktuellen Produktionsbedürfnisse besprechen.",
-            "contactLead": "Für frühere Partner von SIA FIRMA JATA und neue europäische Kunden steht DK TEX für professionelle produktionsbezogene Kommunikation zur Verfügung.",
+            "contactLead": "DK TEX steht neuen und bestehenden europäischen Kunden für professionelle produktionsbezogene Kommunikation zur Verfügung.",
             "emailLabel": "E-Mail",
             "phoneLabel": "Telefon",
             "locationLabel": "Standort",
             "websiteLabel": "Website",
             "formTitle": "Vor dem Senden Ihrer Anfrage",
             "formText": "Für eine effiziente Kommunikation nennen Sie bitte Produkttyp, ungefähre Menge, Spezifikationen oder Fotos, gewünschten Zeitrahmen und relevante Produktionsdetails.",
-            "formNote": "Diese Website ist als Visitenkarten-Website für DK TEX vorbereitet. Ersetzen Sie die Platzhalter für Telefonnummer, E-Mail und Website vor der Veröffentlichung durch bestätigte Unternehmensdaten.",
             "sendEmail": "E-Mail senden",
             "privacyFooterLink": "Datenschutzerklärung",
             "privacyLabel": "Datenschutz",
             "privacyTitle": "Datenschutzerklärung",
-            "privacyUpdated": "Zuletzt aktualisiert: 15. Juni 2026",
+            "privacyUpdated": "Zuletzt aktualisiert: 31. August 2026",
             "privacyIntro": "Diese Erklärung erläutert, wie DK TEX personenbezogene Daten auf dieser Website und in der Kommunikation mit potenziellen oder bestehenden Geschäftspartnern verarbeitet. Sie wurde für eine aus Lettland betriebene Business-Card-Website erstellt und folgt den Grundsätzen der EU-DSGVO sowie der lettischen Datenschutzvorschriften.",
             "privacyControllerTitle": "Verantwortlicher",
-            "privacyControllerText": "Verantwortlicher ist Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), Registernummer 40203385369, Geschäftsanschrift: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Lettland. Kontakt: info@dktex.lv.",
+            "privacyControllerText": "Verantwortlicher ist Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), Registernummer 40203672225, Geschäftsanschrift: Gaismas iela 5 - 143, Daugavpils, LV-5414, Lettland. Kontakt: office@dktex.lv.",
             "privacyDataTitle": "Personenbezogene Daten, die wir verarbeiten können",
             "privacyDataText": "Wir können Ihren Namen, Ihr Unternehmen, Ihre Position, Ihre E-Mail-Adresse, Telefonnummer, den Inhalt Ihrer Nachricht, von Ihnen übermittelte Projektinformationen sowie grundlegende technische Daten verarbeiten, die für den Betrieb und Schutz der Website erforderlich sind.",
             "privacyPurposeTitle": "Zwecke",
@@ -1826,23 +1731,22 @@
             "privacyRightsTitle": "Ihre Rechte",
             "privacyRightsText": "Sie können Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit verlangen, der Verarbeitung widersprechen oder eine Einwilligung widerrufen, soweit anwendbar. Sie haben außerdem das Recht, sich bei der lettischen Datenschutzaufsichtsbehörde Data State Inspectorate zu beschweren.",
             "privacyContactTitle": "Kontakt",
-            "privacyContactText": "Um Ihre Rechte auszuüben oder Fragen zur Datenverarbeitung zu stellen, kontaktieren Sie DK TEX unter info@dktex.lv.",
-            "footerContinuity": "Fortführung der Produktionserfahrung von SIA FIRMA JATA"
+            "privacyContactText": "Um Ihre Rechte auszuüben oder Fragen zur Datenverarbeitung zu stellen, kontaktieren Sie DK TEX unter office@dktex.lv.",
+            "footerRights": "Alle Rechte vorbehalten."
       },
       "pl": {
             "metaTitle": "DK TEX — partner produkcji szwalniczej z Łotwy",
-            "metaDescription": "DK TEX to łotewska firma zajmująca się produkcją szwalniczą, kontynuująca wieloletnie europejskie doświadczenie produkcyjne i relacje z klientami zbudowane przez SIA FIRMA JATA.",
+            "metaDescription": "DK TEX to łotewska firma zajmująca się produkcją szwalniczą, z wieloletnim europejskim doświadczeniem produkcyjnym i stabilnymi relacjami z klientami.",
             "brandTagline": "Produkcja szwalnicza Łotwa",
             "languageLabel": "Język",
             "navAbout": "O nas",
             "navProduction": "Produkcja",
-            "navJata": "Od SIA FIRMA JATA",
             "navCooperation": "Współpraca",
             "navContact": "Kontakt",
             "navContactCta": "Skontaktuj się",
             "heroEyebrow": "Produkcja szwalnicza Łotwa",
             "heroTitle": "Produkcja szwalnicza z Łotwy",
-            "heroLead": "DK TEX kontynuuje wieloletnie europejskie doświadczenie produkcyjne i relacje z klientami zbudowane przez SIA FIRMA JATA.",
+            "heroLead": "DK TEX oferuje niezawodną produkcję szwalniczą z Łotwy, opartą na wieloletnim europejskim doświadczeniu produkcyjnym i stabilnych relacjach z klientami.",
             "heroPrimary": "Skontaktuj się z DK TEX",
             "productionCapabilities": "Możliwości produkcyjne",
             "heroCardIntro": "Niezawodna produkcja szwalnicza, jasna komunikacja i długoterminowa współpraca dla europejskich firm.",
@@ -1855,7 +1759,7 @@
             "trust1Title": "Niezawodny partner",
             "trust1Text": "Odpowiedzialna współpraca skoncentrowana na stabilności, jasności i praktycznej realizacji.",
             "trust2Title": "Doświadczenie produkcyjne",
-            "trust2Text": "Kontynuacja doświadczenia produkcyjnego zgromadzonego przez SIA FIRMA JATA.",
+            "trust2Text": "Doświadczenie produkcyjne zgromadzone przez wiele lat produkcji szwalniczej dla europejskich partnerów.",
             "trust3Title": "Europejskie podejście",
             "trust3Text": "Komunikacja i sposób współpracy dostosowane do europejskich klientów B2B.",
             "trust4Title": "Praca projektowa",
@@ -1863,14 +1767,8 @@
             "aboutLabel": "O DK TEX",
             "aboutTitle": "Spokojny i niezawodny partner produkcyjny dla europejskich firm.",
             "aboutP1": "DK TEX to łotewska firma produkcji szwalniczej skoncentrowana na długoterminowej współpracy, starannej produkcji i jasnej komunikacji.",
-            "aboutP2": "Firma kontynuuje tradycje produkcyjne i zgromadzone doświadczenie związane z SIA FIRMA JATA, która przez wiele lat współpracowała z europejskimi partnerami.",
+            "aboutP2": "Firma opiera się na tradycjach produkcyjnych i doświadczeniu zgromadzonym przez wiele lat współpracy z europejskimi partnerami.",
             "aboutP3": "Naszą rolą jest wspieranie firm szukających stabilnego partnera produkcji szwalniczej w regionie bałtyckim i na rynku europejskim.",
-            "jataCardTitle": "Od SIA FIRMA JATA do DK TEX",
-            "jataCardText": "Wiele profesjonalnych relacji budowano przez lata za pośrednictwem SIA FIRMA JATA. DK TEX kontynuuje tę pracę pod nową marką, z szacunkiem dla wcześniejszej współpracy i jasnym ukierunkowaniem na przyszłe projekty.",
-            "continuityLabel": "Kontynuacja",
-            "continuityTitle": "Nowa marka z szacunkiem dla utrwalonych relacji.",
-            "continuityP1": "Jeśli Państwa firma wcześniej współpracowała z SIA FIRMA JATA, DK TEX jest dostępna do odnowienia kontaktu, rozmów produkcyjnych i nowych możliwości współpracy.",
-            "continuityP2": "Dalsza korespondencja i rozmowy projektowe mogą być prowadzone pod nazwą i danymi kontaktowymi DK TEX.",
             "productionLabel": "Możliwości produkcyjne",
             "productionTitle": "Produkcja szwalnicza, montaż tekstylny i produkcja projektowa.",
             "productionLead": "DK TEX wspiera klientów zgodnie z uzgodnionymi specyfikacjami, praktycznymi wymaganiami i aktualnymi potrzebami produkcyjnymi.",
@@ -1885,7 +1783,7 @@
             "bandTitle": "Praktyczna współpraca produkcyjna",
             "bandText": "Współpracujemy z firmami, które cenią niezawodnego partnera produkcyjnego, jasną komunikację i dbałość o szczegóły.",
             "bullet1": "Rozmowy produkcyjne oparte na specyfikacjach i wymaganiach klienta.",
-            "bullet2": "Odpowiednie do odnowienia współpracy z byłymi partnerami SIA FIRMA JATA.",
+            "bullet2": "Otwartość na nowe partnerstwa i odnowienie długoterminowej współpracy.",
             "bullet3": "Skoncentrowane na europejskiej komunikacji B2B i długoterminowej niezawodności.",
             "cooperationLabel": "Współpraca",
             "cooperationTitle": "Jasny proces dla odnowionych i nowych rozmów produkcyjnych.",
@@ -1900,22 +1798,21 @@
             "step4Text": "Jeśli współpraca jest odpowiednia, może być kontynuowana dzięki stabilnej komunikacji i cyklicznemu planowaniu.",
             "contactLabel": "Kontakt",
             "contactTitle": "Porozmawiajmy o Państwa aktualnych potrzebach produkcyjnych.",
-            "contactLead": "Dla byłych partnerów SIA FIRMA JATA i nowych europejskich klientów DK TEX jest dostępna do profesjonalnej komunikacji dotyczącej produkcji.",
+            "contactLead": "DK TEX jest dostępna do profesjonalnej komunikacji dotyczącej produkcji z nowymi i obecnymi europejskimi klientami.",
             "emailLabel": "E-mail",
             "phoneLabel": "Telefon",
             "locationLabel": "Lokalizacja",
             "websiteLabel": "Strona internetowa",
             "formTitle": "Przed wysłaniem zapytania",
             "formText": "Aby komunikacja była efektywna, prosimy podać typ produktu, przybliżoną ilość, specyfikacje lub zdjęcia, preferowany termin i istotne szczegóły produkcyjne.",
-            "formNote": "Ta strona została przygotowana jako wizytówka internetowa DK TEX. Przed publikacją należy zastąpić przykładowy numer telefonu, e-mail i adres strony potwierdzonymi danymi firmy.",
             "sendEmail": "Wyślij e-mail",
             "privacyFooterLink": "Polityka prywatności",
             "privacyLabel": "Ochrona danych",
             "privacyTitle": "Polityka prywatności",
-            "privacyUpdated": "Ostatnia aktualizacja: 15 czerwca 2026 r.",
+            "privacyUpdated": "Ostatnia aktualizacja: 31 sierpnia 2026",
             "privacyIntro": "Niniejsza polityka wyjaśnia, w jaki sposób DK TEX przetwarza dane osobowe na tej stronie internetowej oraz w komunikacji z potencjalnymi lub obecnymi partnerami biznesowymi. Została przygotowana dla strony wizytówkowej prowadzonej z Łotwy i opiera się na zasadach RODO oraz łotewskich przepisów o ochronie danych.",
             "privacyControllerTitle": "Administrator",
-            "privacyControllerText": "Administratorem danych jest Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), numer rejestracyjny 40203385369, adres siedziby: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Łotwa. Kontakt: info@dktex.lv.",
+            "privacyControllerText": "Administratorem danych jest Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), numer rejestracyjny 40203672225, adres siedziby: Gaismas iela 5 - 143, Daugavpils, LV-5414, Łotwa. Kontakt: office@dktex.lv.",
             "privacyDataTitle": "Dane osobowe, które możemy przetwarzać",
             "privacyDataText": "Możemy przetwarzać imię i nazwisko, firmę, stanowisko, adres e-mail, numer telefonu, treść wiadomości, informacje o projekcie przesłane do nas oraz podstawowe dane techniczne potrzebne do działania i ochrony strony internetowej.",
             "privacyPurposeTitle": "Cele",
@@ -1931,23 +1828,22 @@
             "privacyRightsTitle": "Twoje prawa",
             "privacyRightsText": "Możesz żądać dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia danych, sprzeciwić się przetwarzaniu lub wycofać zgodę, gdy ma to zastosowanie. Masz również prawo złożyć skargę do łotewskiego organu ochrony danych, Data State Inspectorate.",
             "privacyContactTitle": "Kontakt",
-            "privacyContactText": "Aby skorzystać ze swoich praw lub zapytać o przetwarzanie danych, skontaktuj się z DK TEX pod adresem info@dktex.lv.",
-            "footerContinuity": "Kontynuacja doświadczenia produkcyjnego SIA FIRMA JATA"
+            "privacyContactText": "Aby skorzystać ze swoich praw lub zapytać o przetwarzanie danych, skontaktuj się z DK TEX pod adresem office@dktex.lv.",
+            "footerRights": "Wszelkie prawa zastrzeżone."
       },
       "da": {
             "metaTitle": "DK TEX — syproduktionspartner fra Letland",
-            "metaDescription": "DK TEX er en lettisk syproduktionsvirksomhed, der viderefører den mangeårige europæiske produktionserfaring og kunderelationer etableret af SIA FIRMA JATA.",
+            "metaDescription": "DK TEX er en lettisk syproduktionsvirksomhed med mangeårig europæisk produktionserfaring og stabile kunderelationer.",
             "brandTagline": "Syproduktion Letland",
             "languageLabel": "Sprog",
             "navAbout": "Om os",
             "navProduction": "Produktion",
-            "navJata": "Fra SIA FIRMA JATA",
             "navCooperation": "Samarbejde",
             "navContact": "Kontakt",
             "navContactCta": "Kontakt os",
             "heroEyebrow": "Syproduktion Letland",
             "heroTitle": "Syproduktion fra Letland",
-            "heroLead": "DK TEX viderefører den mangeårige europæiske produktionserfaring og de kunderelationer, der blev etableret af SIA FIRMA JATA.",
+            "heroLead": "DK TEX tilbyder pålidelig syproduktion fra Letland, bygget på mangeårig europæisk produktionserfaring og stabile kunderelationer.",
             "heroPrimary": "Kontakt DK TEX",
             "productionCapabilities": "Produktionsmuligheder",
             "heroCardIntro": "Pålidelig syproduktion, klar kommunikation og langsigtet samarbejde for europæiske virksomheder.",
@@ -1960,7 +1856,7 @@
             "trust1Title": "Pålidelig partner",
             "trust1Text": "Ansvarligt samarbejde med fokus på stabilitet, klarhed og praktisk udførelse.",
             "trust2Title": "Produktionserfaring",
-            "trust2Text": "Videreførelse af den produktionserfaring, der er opbygget gennem SIA FIRMA JATA.",
+            "trust2Text": "Produktionserfaring opbygget gennem mange års syproduktion for europæiske partnere.",
             "trust3Title": "Europæisk fokus",
             "trust3Text": "Kommunikation og samarbejdsform tilpasset europæiske B2B-kunder.",
             "trust4Title": "Projektbaseret arbejde",
@@ -1968,14 +1864,8 @@
             "aboutLabel": "Om DK TEX",
             "aboutTitle": "En rolig og pålidelig produktionspartner for europæiske virksomheder.",
             "aboutP1": "DK TEX er en lettisk syproduktionsvirksomhed med fokus på langsigtet samarbejde, omhyggelig produktion og klar kommunikation.",
-            "aboutP2": "Virksomheden viderefører produktionstraditionerne og den oparbejdede erfaring knyttet til SIA FIRMA JATA, som arbejdede med europæiske partnere i mange år.",
+            "aboutP2": "Virksomheden bygger på produktionstraditioner og erfaring opbygget gennem mange års samarbejde med europæiske partnere.",
             "aboutP3": "Vores rolle er at støtte virksomheder, der søger en stabil syproduktionspartner i Baltikum og på det europæiske marked.",
-            "jataCardTitle": "Fra SIA FIRMA JATA til DK TEX",
-            "jataCardText": "Mange professionelle relationer blev gennem årene opbygget gennem SIA FIRMA JATA. DK TEX viderefører dette arbejde under et nyt brand, med respekt for tidligere samarbejde og et klart fokus på fremtidige projekter.",
-            "continuityLabel": "Kontinuitet",
-            "continuityTitle": "Et nyt brand med respekt for etablerede relationer.",
-            "continuityP1": "Hvis jeres virksomhed tidligere samarbejdede med SIA FIRMA JATA, er DK TEX tilgængelig for fornyet kommunikation, produktionsdialog og nye samarbejdsmuligheder.",
-            "continuityP2": "Fremtidig korrespondance og projektdialog kan fortsætte under DK TEX-navnet og kontaktoplysningerne.",
             "productionLabel": "Produktionsmuligheder",
             "productionTitle": "Syproduktion, tekstilsamling og projektbaseret fremstilling.",
             "productionLead": "DK TEX støtter kunder i henhold til aftalte specifikationer, praktiske krav og aktuelle produktionsbehov.",
@@ -1990,7 +1880,7 @@
             "bandTitle": "Praktisk produktionssamarbejde",
             "bandText": "Vi arbejder med virksomheder, der værdsætter en pålidelig produktionspartner, klar kommunikation og opmærksomhed på detaljer.",
             "bullet1": "Produktionsdialog baseret på specifikationer og kundekrav.",
-            "bullet2": "Velegnet til fornyet samarbejde med tidligere partnere af SIA FIRMA JATA.",
+            "bullet2": "Åben for nye partnerskaber og fornyet langsigtet samarbejde.",
             "bullet3": "Fokuseret på europæisk B2B-kommunikation og langsigtet pålidelighed.",
             "cooperationLabel": "Samarbejde",
             "cooperationTitle": "Klar proces for fornyede og nye produktionsdialoger.",
@@ -2005,22 +1895,21 @@
             "step4Text": "Hvor der er et godt match, kan samarbejdet fortsætte gennem stabil kommunikation og løbende planlægning.",
             "contactLabel": "Kontakt",
             "contactTitle": "Lad os drøfte jeres aktuelle produktionsbehov.",
-            "contactLead": "For tidligere partnere af SIA FIRMA JATA og nye europæiske kunder er DK TEX tilgængelig for professionel produktionsrelateret kommunikation.",
+            "contactLead": "DK TEX er tilgængelig for professionel produktionsrelateret kommunikation med nye og eksisterende europæiske kunder.",
             "emailLabel": "E-mail",
             "phoneLabel": "Telefon",
             "locationLabel": "Placering",
             "websiteLabel": "Website",
             "formTitle": "Før I sender jeres forespørgsel",
             "formText": "For effektiv kommunikation bedes I inkludere produkttype, omtrentlig mængde, specifikationer eller fotos, ønsket timing og relevante produktionsdetaljer.",
-            "formNote": "Denne hjemmeside er udarbejdet som en visitkortside for DK TEX. Erstat pladsholdere for telefonnummer, e-mail og website med bekræftede virksomhedsoplysninger før publicering.",
             "sendEmail": "Send e-mail",
             "privacyFooterLink": "Privatlivspolitik",
             "privacyLabel": "Databeskyttelse",
             "privacyTitle": "Privatlivspolitik",
-            "privacyUpdated": "Senest opdateret: 15. juni 2026",
+            "privacyUpdated": "Senest opdateret: 31. august 2026",
             "privacyIntro": "Denne politik forklarer, hvordan DK TEX behandler personoplysninger på dette websted og i kommunikationen med potentielle eller eksisterende forretningspartnere. Den er udarbejdet til et visitkortwebsted, der drives fra Letland, og følger principperne i EU GDPR og lettiske databeskyttelsesregler.",
             "privacyControllerTitle": "Dataansvarlig",
-            "privacyControllerText": "Den dataansvarlige er Sabiedrība ar ierobežotu atbildību “PIRKUMI24” (SIA), registreringsnummer 40203385369, juridisk adresse: Krišjāņa Valdemāra iela 10 - 5, Daugavpils, LV-5401, Letland. Kontakt: info@dktex.lv.",
+            "privacyControllerText": "Den dataansvarlige er Sabiedrība ar ierobežotu atbildību “BIKIT M” (SIA), registreringsnummer 40203672225, juridisk adresse: Gaismas iela 5 - 143, Daugavpils, LV-5414, Letland. Kontakt: office@dktex.lv.",
             "privacyDataTitle": "Personoplysninger vi kan behandle",
             "privacyDataText": "Vi kan behandle dit navn, virksomhed, stilling, e-mailadresse, telefonnummer, indholdet af din besked, projektoplysninger du sender til os, samt grundlæggende tekniske data, der er nødvendige for at drive og beskytte webstedet.",
             "privacyPurposeTitle": "Formål",
@@ -2036,8 +1925,8 @@
             "privacyRightsTitle": "Dine rettigheder",
             "privacyRightsText": "Du kan anmode om indsigt, berigtigelse, sletning, begrænsning, dataportabilitet, gøre indsigelse mod behandling eller trække samtykke tilbage, hvor det er relevant. Du har også ret til at klage til den lettiske databeskyttelsesmyndighed, Data State Inspectorate.",
             "privacyContactTitle": "Kontakt",
-            "privacyContactText": "For at udøve dine rettigheder eller spørge om databehandling, kontakt DK TEX på info@dktex.lv.",
-            "footerContinuity": "Viderefører produktionserfaringen fra SIA FIRMA JATA"
+            "privacyContactText": "For at udøve dine rettigheder eller spørge om databehandling, kontakt DK TEX på office@dktex.lv.",
+            "footerRights": "Alle rettigheder forbeholdes."
       }
 };
     const langMap = {
